@@ -1,0 +1,588 @@
+:root {
+  --main-bg-color: #ffffff;
+  --main-links-color: #202020;
+  --main-banner-height: 8vh;
+  --main-content-height: 87vh;
+  --main-font-size: clamp(1rem, 0.25vw + 0.75rem, 4rem);
+  --footer-height: 5vh;
+  --secondary-links-color: #5a5a5a;
+  --links-hover-color: #03aeef;
+  --search-bar-bg-color: #cecece;
+  --search-bar-hover-bg-color: #bababa;
+  --mobile-main-content-height: 83vh;
+  --mobile-dropdown-top-position: 12vh;
+}
+* {
+  font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  font-size: var(--main-font-size);
+  background-color: var(--main-bg-color);
+}
+a, button {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+input, textarea {
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+}
+#main-banner, footer {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+}
+.dropdown-btn:hover, .dropdown-item:hover, 
+#footer-nav > button:hover {
+  color: var(--links-hover-color);
+}
+#main-banner {
+  position: relative;
+  background-color: var(--main-bg-color);
+  height: var(--main-banner-height);
+  border-bottom: 1px solid #e1e1e1;
+  z-index: 5;
+}
+.logo {
+  font-size: 0;
+  width: 8.5%;
+  min-width: 90px;
+  height: max-content;
+  padding: 0 1.5%;
+}
+.logo img {
+  width: 100%;
+}
+/* main navigation links and search bar styles */
+#main-nav {
+  display: flex;
+  gap: 2vw;
+  margin-left: auto;
+}
+.dropdown-btn {
+  color: var(--main-links-color);
+  font-size: 1em;
+  font-weight: bold;
+  transition: all 160ms;
+}
+/* search bar */
+.search-bar {
+  position: relative;
+  width: 18vw;
+  height: 55%;
+  max-height: 3rem;
+  margin: 0 2vw;
+  border-radius: 0.35em;
+  z-index: 99;
+}
+.search-field,
+.search-field input {
+  border-radius: 0.35em;
+  height: 100%;
+}
+.search-field {
+  display: flex;
+  align-items: center;
+  background-color: var(--search-bar-bg-color);
+  transition: background-color 100ms ease-in-out;
+}
+.search-field.active:hover,
+.autocomplete-list {
+  background-color: var(--search-bar-bg-color);
+}
+.search-field:hover,
+.autocomplete-active,
+.autocomplete-list a:hover {
+  background-color: var(--search-bar-hover-bg-color);
+}
+.active {
+  box-shadow: 0 0.1em 0 0 rgb(0, 0, 0, 0.07);
+  border-radius: 0.35em 0.35em 0 0;
+}
+.search-field input {
+  background-color: transparent;
+  color: #3e3e3e;
+  width: 100%;
+  padding: 0 0 0 1em;
+}
+.search-btn {
+  height: 100%;
+  width: auto;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  margin: 0 0.5em 0 0;
+  background-image: url(../imgs/search-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.search-btn:hover {
+  opacity: 0.7;
+}
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  width: 100%;
+  max-height: 280px;
+  padding: 0.5em;
+  margin: 0;
+  border-radius: 0 0 0.35em 0.35em;
+  overflow-y: auto;
+  z-index: -1;
+}
+.autocomplete-list a {
+  display: inline-block;
+  color: var(--main-links-color);
+  width: 100%;
+  padding: 0.5em;
+}
+.autocomplete-list p {
+  margin: 0;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Dropdown lists >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.drop-down-lists-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+.dropdown-list {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  left: 0;
+  top: -100vh;
+  width: 100vw;
+  padding: 1.5vw;
+  opacity: 0;
+  background-color: var(--main-bg-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: all 200ms ease-in-out;
+}
+.dropdown-list::after {
+  position: fixed;
+  display: block;
+  content: "";
+  pointer-events: none;
+  top: var(--main-banner-height);
+  left: 0;
+  width: 100vw;
+  height: var(--main-content-height);
+  background-color: transparent;
+  backdrop-filter: blur(2px) grayscale(100%);
+  -webkit-backdrop-filter: blur(2px) grayscale(100%); /* for safari */
+  opacity: 1;
+  z-index: -1;
+}
+.dropdown-list[data-visible="true"] {
+  top: var(--main-banner-height) !important;
+  opacity: 1 !important;
+}
+.list-column {
+  display: flex;
+  flex-direction: column;
+  width: clamp(5rem, 5vw + 8rem, 20rem);
+}
+.dropdown-item {
+  font-family: sans-serif;
+  color: var(--secondary-links-color);
+  width: fit-content;
+  padding: 0.4em;
+  transition: all 140ms;
+}
+.dropdown-item:hover {
+  margin-left: 0.25em;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Main content styles >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+main {
+  overflow: auto;
+  position: relative;
+  display: flex;
+  height: var(--main-content-height);
+}
+/* grid cards */
+.cards-container {
+  flex-basis: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  height: fit-content;
+  margin: 1.5em;
+  margin-bottom: var(--footer-height);
+}
+.card, .card img, .card a {
+  transition: all 140ms ease-in-out;
+}
+.card {
+  height: fit-content;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.5em rgb(0, 0, 0, 0.2);
+  padding-bottom: 0.2em;
+}
+.card a {
+  font-size: 0.85em;
+  font-family: sans-serif;
+  border-radius: 0.5em 0.5em 0 0;
+  display: block;
+  text-align: center;
+  color: var(--main-links-color);
+}
+.card :nth-child(2) {
+  margin: 0.3em 0;
+}
+.card img {
+  width: 100%;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.card:hover {
+  box-shadow: 0 0 1em rgb(0, 0, 0, 0.15);
+}
+.card:hover img {
+  opacity: 0.85;
+}
+.card:hover a {
+  color: var(--links-hover-color);
+}
+/* Google ads styles */
+.ad-template {
+  flex-basis: 20%;
+  background-color: #a8c4f8;
+  border: 2.5px solid #c9c9c9;
+  border-radius: 0.9em;
+  margin: 1.5em 0;
+}
+.ad-template.left {
+  margin-left: 1.5em;
+}
+.ad-template.right {
+  margin-right: 1.5em;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Section panels >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+#panels-container {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: transparent;
+  backdrop-filter: blur(2px) grayscale(100%);
+  -webkit-backdrop-filter: blur(2px) grayscale(100%); /* for safari */
+  opacity: 0;
+  z-index: 3;
+  animation: panel-container-opacity 500ms forwards;
+}
+.panel {
+  overflow: auto;
+  position: relative;
+  display: none;
+  top: 0;
+  left: 100%;
+  width: 65%;
+  max-width: 1400px;
+  height: 70%;
+  max-height: 800px;
+  padding: 2em;
+  border: 0.5em solid var(--links-hover-color);
+  border-radius: 1em;
+  opacity: 0;
+  background-color: var(--main-bg-color);
+  animation: panel-expand 500ms forwards;
+}
+#panels-container.expand {
+  display: flex;
+}
+.panel.expand {
+  display: block;
+}
+@keyframes panel-container-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes panel-expand {
+  from {
+    opacity: 0;
+    left: 100%;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+.panel h3 {
+  font-size: 1.5em;
+  margin: 0 0 4vh 0;
+}
+.panel p {
+  font-size: 1em;
+  line-height: 1.25;
+}
+.panel p > span {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.panel figure {
+  position: relative;
+  float: right;
+  width: 25%;
+  max-width: 240px;
+  margin: 0.5em 0.5em 2.5em 5em;
+}
+.panel figure img {
+  width: 100%;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+}
+.panel figure figcaption {
+  position: absolute;
+  bottom: 5%;
+  left: -15%;
+  font-style: italic;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  background-color: #03aeef;
+}
+/* contact us panel */
+.panel form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: fit-content;
+  height: 50vh;
+  max-height: 500px;
+  margin: auto;
+}
+.panel form > div > * {
+  display: block;
+}
+.panel form label {
+  display: inline-block;
+  color: var(--secondary-font-color);
+  font-size: 1em;
+  padding-bottom: 0.25em;
+}
+.panel input {
+  width: 14em;
+}
+.panel textarea {
+  width: 22em;
+}
+.panel form > div > input,
+.panel form > div > textarea {
+  color: var(--secondary-links-color);
+  background-color: var(--search-bar-bg-color);
+  font-size: 0.9em;
+  padding: 0.25em;
+  border: 0.1em solid #909090;
+  border-radius: 0.15em;
+}
+.panel form > div > input:hover,
+.panel form > div > textarea:hover {
+  background-color: var(--search-bar-hover-bg-color);
+}
+#message {
+  resize: vertical;
+}
+.panel form button {
+  font-size: 0.9em;
+  width: min-content;
+  padding: 0.3em 1em;
+  border-radius: 0.5em;
+  color: #fff;
+  border: 0.2em solid #0395ef;
+  background-color: #03aeef;
+}
+.panel form button:hover {
+  background-color: #0395ef;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Footer styles >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+footer {
+  position: fixed;
+  justify-content: space-between;
+  left: 0;
+  bottom: 0;
+  background-color: var(--main-links-color);
+  height: var(--footer-height);
+  padding: 0 2vw;
+  z-index: 5;
+}
+#footer-nav {
+  line-height: 1;
+}
+#footer-nav > * + * {
+  margin-left: 1vw;
+}
+footer button, footer p {
+  color: var(--main-bg-color);
+  font-family: sans-serif;
+  transition: all 120ms ease-in-out;
+}
+footer button {
+  font-size: 0.85em;
+}
+footer p {
+  font-size: 0.75em;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Search results >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.search-results {
+  font-size: 1.1em;
+  color: var(--secondary-links-color);
+  grid-column: 1 / span 4;
+  height: fit-content;
+  padding: 0.25em 0;
+  margin: 0;
+  border-bottom: 0.15em solid var(--search-bar-bg-color);
+}
+
+
+@media screen and (max-width: 75rem) {
+  .panel figure {
+    width: 35%;
+    max-width: 180px;
+    margin: 0.5em 0.5em 2em 2.5em;
+  }
+  .panel figure figcaption {
+    font-size: 0.6em;
+  }
+  .ad-template.right {
+    display: none;
+  }
+  .ad-template.left {
+    flex-basis: 25%;
+  }
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .search-results {
+    font-size: 1em;
+    grid-column: 1 / span 3;
+  }
+}
+@media screen and (max-width: 46.25rem) {
+  #main-nav {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    top: var(--main-banner-height);
+    height: 4vh;
+    width: 100vw;
+    left: 0;
+    gap: 0;
+    box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.05);
+    transition: all 120ms ease-in-out;
+  }
+  .dropdown-btn {
+    font-size: 0.9em;
+  }
+  .search-field input {
+    font-size: 0.9em;
+  }
+  .dropdown-list {
+    overflow: auto;
+    max-height: var(--mobile-main-content-height);
+  }
+  .dropdown-list[data-visible="true"] {
+    top: var(--mobile-dropdown-top-position) !important;
+  }
+  .search-bar{
+    width: 40vw;
+    margin: 0 4vw 0 auto;
+  }
+  main {
+    flex-direction: column;
+    margin-top: 4vh;
+    height: var(--mobile-main-content-height);
+  }
+  .ad-template.left {
+    display: none;
+  }
+  .ad-template.right {
+    display: block;
+    flex-basis: 40%;
+    border-radius: 0;
+    margin: 0;
+  }
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .panel figure {
+    display: none;
+  }
+  .panel {
+    width: 85%;
+    padding: 1.5em;
+    border: 0.35em solid var(--links-hover-color);
+  }
+  .panel h3 {
+    font-size: 1.25em;
+  }
+  .panel p, .panel span  {
+    font-size: 0.9em;
+  }
+  .panel form > div > input,
+  .panel form > div > textarea {
+    font-size: 0.8em;
+  }
+  .panel textarea {
+    width: 18em;
+  }
+  .panel form button {
+    padding: 0.2em 0.75em;
+  }
+  .search-results {
+    font-size: 0.9em;
+    grid-column: 1 / span 2;
+  }
+}
+@media screen and (max-width: 35rem) {
+  #footer-nav :last-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 27rem) {
+  .dropdown-btn {
+    font-size: 0.8em;
+  }
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  .panel textarea {
+    width: 16.5em;
+  }
+  #footer-nav {
+    line-height: 0.75;
+  }
+  footer button {
+    font-size: 0.7em;
+  }
+  footer p {
+    font-size: 0.65em;
+    width: 35%;
+  }
+  .search-results {
+    grid-column: 1 / span 1;
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Kinematics",
+    "tags": ["Kinematics", "Velocity", "Speed", "Position", "Acceleration", "Displacement", "Movement"],
+    "category": "Physics",
+    "link": "../simulations/Kinematics/index.html",
+    "img": "../../imgs/kinematics-scr-5abf9a471216c5c1beed.webp",
+    "alt": "kinematics simulation screenshot",
+    "a": "kinematics simulation"
+  }
+]
