@@ -1,24 +1,27 @@
 :root {
-  --main-bg-color: #ffffff;
-  --main-links-color: #202020;
+  --main-color: #ffffff;
+  --light-color: #808080;
+  --middle-color: #3e3e3e;
+  --dark-color: #1b1b1b;
+  --main-hover-color: #006cff;
+  --something: rgb(0, 13, 255);
+  --input-field-bg-color: #cecece;
+  --input-field-hover-bg-color: #bababa;
   --main-banner-height: 8vh;
   --main-content-height: 87vh;
   --main-font-size: clamp(1rem, 0.25vw + 0.75rem, 4rem);
   --footer-height: 5vh;
-  --secondary-links-color: #5a5a5a;
-  --links-hover-color: #03aeef;
-  --search-bar-bg-color: #cecece;
-  --search-bar-hover-bg-color: #bababa;
   --mobile-main-content-height: 83vh;
   --mobile-dropdown-top-position: 12vh;
 }
 * {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   box-sizing: border-box;
 }
 body {
   font-size: var(--main-font-size);
-  background-color: var(--main-bg-color);
+  background-color: var(--main-color);
+  background-color: #ffffff;
 }
 a, button {
   text-decoration: none;
@@ -32,6 +35,11 @@ input, textarea {
   border: none;
   -webkit-tap-highlight-color: transparent;
 }
+a:disabled, button:disabled,
+input:disabled, textarea:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 textarea:-webkit-autofill,
@@ -42,16 +50,15 @@ select:-webkit-autofill {
   display: flex;
   align-items: center;
   width: 100vw;
+  background-color: var(--dark-color);
 }
 .dropdown-btn:hover, .dropdown-item:hover, 
 #footer-nav > button:hover {
-  color: var(--links-hover-color);
+  color: var(--main-hover-color);
 }
 #main-banner {
   position: relative;
-  background-color: var(--main-bg-color);
   height: var(--main-banner-height);
-  border-bottom: 1px solid #e1e1e1;
   z-index: 5;
 }
 .logo {
@@ -71,7 +78,7 @@ select:-webkit-autofill {
   margin-left: auto;
 }
 .dropdown-btn {
-  color: var(--main-links-color);
+  color: var(--main-color);
   font-size: 1em;
   font-weight: bold;
   transition: all 160ms;
@@ -94,17 +101,17 @@ select:-webkit-autofill {
 .search-field {
   display: flex;
   align-items: center;
-  background-color: var(--search-bar-bg-color);
+  background-color: var(--input-field-bg-color);
   transition: background-color 100ms ease-in-out;
 }
 .search-field.active:hover,
 .autocomplete-list {
-  background-color: var(--search-bar-bg-color);
+  background-color: var(--input-field-bg-color);
 }
 .search-field:hover,
 .autocomplete-active,
 .autocomplete-list a:hover {
-  background-color: var(--search-bar-hover-bg-color);
+  background-color: var(--input-field-hover-bg-color);
 }
 .active {
   box-shadow: 0 0.1em 0 0 rgb(0, 0, 0, 0.07);
@@ -112,7 +119,7 @@ select:-webkit-autofill {
 }
 .search-field input {
   background-color: transparent;
-  color: #3e3e3e;
+  color: var(--middle-color);
   width: 100%;
   padding: 0 0 0 1em;
 }
@@ -144,7 +151,7 @@ select:-webkit-autofill {
 }
 .autocomplete-list a {
   display: inline-block;
-  color: var(--main-links-color);
+  color: var(--dark-color);
   width: 100%;
   padding: 0.5em;
 }
@@ -168,7 +175,7 @@ select:-webkit-autofill {
   width: 100vw;
   padding: 1.5vw;
   opacity: 0;
-  background-color: var(--main-bg-color);
+  background-color: #101010;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   transition: all 200ms ease-in-out;
 }
@@ -198,7 +205,7 @@ select:-webkit-autofill {
 }
 .dropdown-item {
   font-family: sans-serif;
-  color: var(--secondary-links-color);
+  color: var(--light-color);
   width: fit-content;
   padding: 0.4em;
   transition: all 140ms;
@@ -219,7 +226,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2em;
-  height: fit-content;
+  align-content: flex-start;
   margin: 1.5em;
   margin-bottom: var(--footer-height);
 }
@@ -228,20 +235,21 @@ main {
 }
 .card {
   height: fit-content;
+  font-size: 0.9em;
+  border: 0.5em solid var(--dark-color);
   border-radius: 0.5em;
   box-shadow: 0 0 0.5em rgb(0, 0, 0, 0.2);
-  padding-bottom: 0.2em;
+  background-color: var(--dark-color);
 }
 .card a {
-  font-size: 0.85em;
   font-family: sans-serif;
   border-radius: 0.5em 0.5em 0 0;
   display: block;
   text-align: center;
-  color: var(--main-links-color);
+  color: var(--main-color);
 }
 .card :nth-child(2) {
-  margin: 0.3em 0;
+  margin-top: 0.5em;
 }
 .card img {
   width: 100%;
@@ -254,7 +262,7 @@ main {
   opacity: 0.85;
 }
 .card:hover a {
-  color: var(--links-hover-color);
+  color: var(--main-hover-color);
 }
 /* Google ads styles */
 .ad-template {
@@ -299,10 +307,10 @@ main {
   height: 70%;
   max-height: 800px;
   padding: 2em;
-  border: 0.5em solid var(--links-hover-color);
+  border: 0.5em solid var(--dark-color);
   border-radius: 1em;
   opacity: 0;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-color);
   animation: panel-expand 500ms forwards;
 }
 #panels-container.expand {
@@ -335,7 +343,7 @@ main {
 }
 .panel p {
   font-size: 1em;
-  line-height: 1.25;
+  line-height: 1.35;
 }
 .panel p > span {
   font-size: 0.9em;
@@ -362,7 +370,8 @@ main {
   font-weight: bold;
   padding: 0.5em 0.75em;
   border-radius: 0.25em;
-  background-color: #03aeef;
+  color: var(--main-color);
+  background-color: var(--main-hover-color);
 }
 /* contact us panel */
 .panel form {
@@ -379,7 +388,7 @@ main {
 }
 .panel form label {
   display: inline-block;
-  color: var(--secondary-font-color);
+  color: var(--dark-color);
   font-size: 1em;
   padding-bottom: 0.25em;
 }
@@ -391,31 +400,35 @@ main {
 }
 .panel form > div > input,
 .panel form > div > textarea {
-  color: var(--secondary-links-color);
-  background-color: var(--search-bar-bg-color);
+  color: var(--middle-color);
+  background-color: var(--input-field-bg-color);
   font-size: 0.9em;
   padding: 0.25em;
-  border: 0.1em solid #909090;
+  border: 0.1em solid var(--light-color);
   border-radius: 0.15em;
 }
 .panel form > div > input:hover,
 .panel form > div > textarea:hover {
-  background-color: var(--search-bar-hover-bg-color);
+  background-color: var(--input-field-hover-bg-color);
 }
 #message {
   resize: vertical;
 }
-.panel form button {
+.generic-btn,
+.btn-container button {
   font-size: 0.9em;
-  width: min-content;
-  padding: 0.3em 1em;
+  padding: 0.4em 0;
   border-radius: 0.5em;
-  color: #fff;
-  border: 0.2em solid #0395ef;
-  background-color: #03aeef;
+  color: var(--main-color);
+  background-color: var(--main-hover-color);
 }
-.panel form button:hover {
-  background-color: #0395ef;
+form button.generic-btn {
+  width: fit-content;
+  padding: 0.4em 1em;
+}
+.generic-btn:hover,
+.btn-container button:hover  {
+  background-color: #0356ef;
 }
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Footer styles >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 footer {
@@ -423,7 +436,6 @@ footer {
   justify-content: space-between;
   left: 0;
   bottom: 0;
-  background-color: var(--main-links-color);
   height: var(--footer-height);
   padding: 0 2vw;
   z-index: 5;
@@ -435,8 +447,8 @@ footer {
   margin-left: 1vw;
 }
 footer button, footer p {
-  color: var(--main-bg-color);
   font-family: sans-serif;
+  color: var(--main-color);
   transition: all 120ms ease-in-out;
 }
 footer button {
@@ -448,12 +460,12 @@ footer p {
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Search results >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 .search-results {
   font-size: 1.1em;
-  color: var(--secondary-links-color);
+  color: var(--middle-color);
   grid-column: 1 / span 4;
   height: fit-content;
   padding: 0.25em 0;
   margin: 0;
-  border-bottom: 0.15em solid var(--search-bar-bg-color);
+  border-bottom: 0.15em solid var(--input-field-bg-color);
 }
 
 
@@ -485,13 +497,12 @@ footer p {
     position: absolute;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--main-bg-color);
     top: var(--main-banner-height);
     height: 4vh;
     width: 100vw;
     left: 0;
     gap: 0;
-    box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.05);
+    background-color: var(--middle-color);
     transition: all 120ms ease-in-out;
   }
   .dropdown-btn {
@@ -534,7 +545,7 @@ footer p {
   .panel {
     width: 85%;
     padding: 1.5em;
-    border: 0.35em solid var(--links-hover-color);
+    border: 0.35em solid var(--dark-color);
   }
   .panel h3 {
     font-size: 1.25em;
@@ -550,7 +561,7 @@ footer p {
     width: 18em;
   }
   .panel form button {
-    padding: 0.2em 0.75em;
+    padding: 0.3em 1em;
   }
   .search-results {
     font-size: 0.9em;

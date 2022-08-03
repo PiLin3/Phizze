@@ -1,6 +1,4 @@
 :root {
-  --main-font-color: #121212;
-  --border-color: #c9c9c9;
   --light-marker-color: #f5f5f5;
   --elements-margin: 5%;
   --ui-vertical-gap: 1vh;
@@ -13,6 +11,7 @@
 canvas:focus {
   outline: none;
 }
+
 .simulation-container {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -32,13 +31,13 @@ canvas:focus {
   padding: 1.5em 0 1.5em 1.5em;
 }
 #renderCanvas {
-  background-color: var(--border-color);
+  background-color: var(--main-color);
   touch-action: none;
   width: 100%;
   height: 25%;
-  border-top: 0.5em solid var(--border-color);
-  border-bottom: 0.5em solid var(--border-color);
-  border-left: 0.5em solid var(--border-color);
+  border-top: 0.5em solid var(--light-marker-color);
+  border-bottom: 0.5em solid var(--light-marker-color);
+  border-left: 0.5em solid var(--light-marker-color);
   border-radius: 0.9em 0 0 0;
 }
 .charts-btns-container {
@@ -47,8 +46,8 @@ canvas:focus {
 .charts-container {
   background-color: #ffffff;
   height: 75%;
-  border-bottom: 0.5em solid var(--border-color);
-  border-left: 0.5em solid var(--border-color);
+  border-bottom: 0.5em solid var(--light-marker-color);
+  border-left: 0.5em solid var(--light-marker-color);
   border-radius: 0 0 0 0.9em;
 }
 .chart {
@@ -73,7 +72,7 @@ canvas:focus {
   z-index: 2;
 }
 .chart button:hover {
-  color: var(--border-color);
+  color: var(--main-hover-color);
 }
 .shrink {
   height: 1em;
@@ -91,7 +90,7 @@ canvas:focus {
 #ui {
   overflow: hidden;
   justify-content: space-between;
-  background-color: var(--border-color);
+  background-color: var(--light-marker-color);
   border-radius: 0 0.9em 0.9em 0;
   padding: 0.5em;
   margin: 1.5em 1.5em 1.5em 0;
@@ -106,8 +105,7 @@ canvas:focus {
   font-size: 1.25em;
   text-align: center;
   margin: 0;
-  border: 0.15em solid var(--light-marker-color);
-  background-color: #ffffff;
+  background-color: var(--main-color);
   border-radius: 0.25em;
 }
 .timer-tab > p { 
@@ -120,7 +118,7 @@ canvas:focus {
   transition: all 80ms ease-in-out;
 }
 .fullscreen-btn:hover {
-  opacity: 0.85;
+  background-color: var(--input-field-bg-color);
 }
 .fullscreen-btn:active {
   opacity: 1;
@@ -131,22 +129,9 @@ canvas:focus {
   gap: var(--elements-margin);
   margin-bottom: var(--ui-vertical-gap);
 }
-.btn-container button {
-  font-size: 0.9em;
-  background-color: #ffffff;
-  padding: 0.4em 0.1em;
-  border-radius: 0.25em;
-  box-shadow:
-    0.1em 0.1em 0.1em #797979,
-    inset 0.1em 0.1em #ffffff80;
-  transition: all 80ms ease-in-out;
-}
-.btn-container button:hover {
-  background-color: #ffffffd9;
-}
-.btn-container button:active {
-  background-color: #ffffff;
-  box-shadow: inset 0.1em 0.1em #ffffff80;
+.generic-btn.mobile {
+  width: 70%;
+  display: none;
 }
 /* input styles */
 .input-container {
@@ -159,7 +144,6 @@ canvas:focus {
   background-color: #ffffff;
   border-radius: 0.25em;
   padding: 0.5em;
-  border: 0.25em solid var(--light-marker-color);
 }
 .input-element > * + * {
   margin-top: 0.1em;
@@ -195,7 +179,7 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 4px;
   cursor: pointer;
   transition: 0.2s;
-  background: #03a9f4;
+  background-color: var(--main-hover-color);
   border-radius: 25px;
 }
 input[type=range]::-webkit-slider-thumb {
@@ -209,7 +193,7 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -8px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #03a9f4;
+  background-color: var(--main-hover-color);
 }
 .range-value {
   position: absolute;
@@ -225,7 +209,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   height: 24px;
   line-height: 24px;
   text-align: center;
-  background: #03a9f4;
+  background-color: var(--main-hover-color);
   color: #fff;
   font-size: 0.8em;
   display: block;
@@ -239,7 +223,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 10px solid #03a9f4;
+  border-top: 10px solid var(--main-hover-color);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   top: 100%;
@@ -252,13 +236,12 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   justify-content: space-between;
   background-color: #ffffff;
   height: 100%;
-  padding: 0.25em;
+  padding: 0.5em;
   border-radius: 0.25em;
-  border: 0.25em solid var(--light-marker-color);
   margin-top: var(--ui-vertical-gap);
 }
 .details > * + * {
-  border-top: 0.25em solid var(--border-color);
+  border-top: 0.25em solid var(--light-marker-color);
   padding-top: var(--elements-margin);
 }
 .details h3 {
@@ -271,9 +254,23 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 .details span {
   display: inline-block;
-  font-style: italic;
   font-weight: bold;
   letter-spacing: 0.1em;
+}
+.details .generic-btn {
+  width: 100%;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Read More Panel >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.panel h4,
+.panel li::marker {
+  color: var(--main-hover-color);
+}
+.panel ul {
+  padding-left: 2em;
+  margin: 0;
+}
+.panel li {
+  margin: 0.25em 0;
 }
 @media screen and (max-width: 75rem) {
   .timer-tab > p,
@@ -282,6 +279,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   }
   .btn-container button,
   .input-element label,
+  .generic-btn.mobile,
   .slider-container {
     font-size: 0.75em;
   }
@@ -296,7 +294,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   .simulation-container {
     grid-template-columns: 100%;
     grid-template-rows: 19vh 56vh;
-    background-color: var(--border-color);
+    background-color: var(--light-marker-color);
     width: 100vw;
     height: 75vh;
   }
@@ -319,6 +317,12 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     padding: 1.5% 0;
     font-size: 0.85em;
   }
+  .timer-tab > p { 
+    width: 40%;
+  }
+  .generic-btn.mobile {
+    display: block;
+  }
   .chart-btn {
     background-color: #ffffff;
     padding: 0.2em 0.4em;
@@ -327,7 +331,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     border-radius: 0.25em;
   }
   .chart-btn:active {
-    color: var(--border-color);
+    color: var(--light-color);
     box-shadow: none;
   }
   .charts-container {
@@ -344,9 +348,11 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   #ui {
     grid-row: 1/2;
     justify-content: space-between;
-    /* gap: 1.35vh; */
     padding: 0.75em 0.75em 0 0.75em;
     border-radius: 0;
+    margin: 0;
+  }
+  .timer-tab, .btn-container {
     margin: 0;
   }
   .timer-tab > p, .fullscreen-btn {
@@ -354,17 +360,28 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     height: 100%;
     margin: 0;
   }
+  .generic-btn{
+    font-size: 0.9em;
+    width: fit-content;
+    padding: 0.4em 1.5em;
+    border-radius: 0.5em;
+    color: var(--main-color);
+    background-color: var(--main-hover-color);
+  }
+  .generic-btn:hover {
+    background-color: #0356ef;
+  }
   .btn-container {
     height: 18%;
   }
-  .btn-container button {
+  .btn-container button,.generic-btn.mobile {
     padding: 0.5vh 2vh;
   }
   .input-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 100%;
+    height: 50%;
   }
   .input-element {
     justify-content: space-around;

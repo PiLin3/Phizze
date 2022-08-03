@@ -1,9 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
 module.exports = {
   entry: {
-    "scripts/main": "./src/scripts/index.js",
-    "pages/search-results/searchResults": "./src/pages/search-results/searchResults.js",
+    "main": "./src/scripts/main.js",
+    "searchResults": "./src/scripts/searchResults.js",
+    "simulations/kinematics/index": "./src/simulations/kinematics/index.js",
   },
   module: {
     rules: [
@@ -18,20 +20,40 @@ module.exports = {
           filename: "imgs/[name]-[hash][ext]",
         },
       },
+      {
+        test: /\.(glb|gltf)$/,
+        use: [{
+          loader: 'file-loader',
+          options:
+          {
+            outputPath: 'simulations/assets/',
+          },
+        }],
+    },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       inject: 'body',
-      chunks: ["scripts/main"],
+      scriptLoading: 'blocking',
+      chunks: ["main"],
     }),
     new HtmlWebpackPlugin({
       title: "Search Results",
-      filename: "pages/search-results/searchResults.html",
-      template: "./src/pages/search-results/searchResults.html",
+      filename: "pages/searchResults.html",
+      template: "./src/pages/searchResults.html",
       inject: 'body',
-      chunks: ["scripts/main", "pages/search-results/searchResults"],
+      scriptLoading: 'blocking',
+      chunks: ["main", "searchResults"],
+    }),
+    new HtmlWebpackPlugin({
+      title: "Kinematics-Velocity/acceleration/displacement Simulator",
+      filename: "simulations/kinematics/index.html",
+      template: "./src/simulations/kinematics/index.html",
+      inject: 'body',
+      scriptLoading: 'blocking',
+      chunks: ["main", "simulations/kinematics/index"],
     }),
   ],
 }

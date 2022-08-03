@@ -1,18 +1,17 @@
 import '../styles/normalize.css';
-import '../styles/index.css';
-import searchData from "../pages/search-results/searchData.json";
+import '../styles/main.css';
+import searchData from '../json/searchData.json';
 
-const dropdownList = document.querySelectorAll(".dropdown-list");
-const footerNav = document.getElementById("footer-nav");
-const panels = document.getElementsByClassName("panel");
-const panelsContainer = document.getElementById("panels-container");
+const dropdownList = document.querySelectorAll('.dropdown-list');
+const panelsContainer = document.getElementById('panels-container');
+const panels = panelsContainer.getElementsByClassName('panel');
 let panelIndex;
 
 // Search bar
 // takes two arguments, the search field element and an array of suggestion values
 function autocomplete (searchInput, suggestions) {
   const searchBarContainer = searchInput.parentNode;
-  const searchBtn = searchBarContainer.querySelector(".search-btn");
+  const searchBtn = searchBarContainer.querySelector('.search-btn');
   let activeIndex;
   let resultsData = [];
   searchInput.addEventListener('input', (e) => {
@@ -27,8 +26,8 @@ function autocomplete (searchInput, suggestions) {
       showSearchResults(e.target.value);
     }
     // create a ul container that will hold the suggested items
-    let autocompleteList = document.createElement("ul");
-    autocompleteList.setAttribute("class", "autocomplete-list");
+    let autocompleteList = document.createElement('ul');
+    autocompleteList.setAttribute('class', 'autocomplete-list');
     // append the ul container as a child of the searchBarContainer
     searchBarContainer.appendChild(autocompleteList);
     // filter the suggestions against user input characters
@@ -109,7 +108,7 @@ function autocomplete (searchInput, suggestions) {
     }
   }
   function closeList(elmnt) {
-    let list = searchBarContainer.querySelector(".autocomplete-list");
+    let list = searchBarContainer.querySelector('.autocomplete-list');
     if(!list){return}
     if (elmnt != list && elmnt != searchInput && elmnt != searchBtn) {
       searchBarContainer.removeChild(list);
@@ -121,68 +120,76 @@ function autocomplete (searchInput, suggestions) {
     if (!inp) {return};
     localStorage.setItem('search-keyword', JSON.stringify(inp));
     localStorage.setItem('search-results', JSON.stringify(resultsData));
-    window.location.href = '/pages/search-results/searchResults.html';
+    window.location.href = '/pages/searchResults.html';
   }
   // close the suggestion list if user clicks outside the container
-  document.addEventListener("click", function (e) {
+  document.addEventListener('click', function (e) {
     closeList(e.target);
   });
 }
-autocomplete(document.getElementById("search"), searchData);
+autocomplete(document.getElementById('search'), searchData);
 
-//main nav dropdown menu
-document.addEventListener("click", (e) => {
-  //cheack if the clicked element is a nav button
-  if (e.target.classList.contains("dropdown-btn")) {
-    //check which nav section has been clicked
-    let section = e.target.getAttribute("data-section");
+// main event listener
+document.addEventListener('click', (e) => {
+  mainDropdown(e.target);
+  panelDisplay(e.target);
+});
+// main navigation buttons
+function mainDropdown(elem) {
+  // cheack if the clicked element is a nav button
+  if (elem.classList.contains('dropdown-btn')) {
+    // check which nav section has been clicked
+    let section = elem.getAttribute('data-section');
     for (let i = 0; i < dropdownList.length; i++) {
-      //open menu and close if already oppened
+      // open-close menu
       if (dropdownList[i].classList.contains(section)) {
-        const visible = dropdownList[i].getAttribute("data-visible");
-        if (visible === "true") {
-          dropdownList[i].setAttribute("aria-expanded", false);
-          dropdownList[i].setAttribute("data-visible", false);
+        const visible = dropdownList[i].getAttribute('data-visible');
+        if (visible === 'true') {
+          dropdownList[i].setAttribute('aria-expanded', false);
+          dropdownList[i].setAttribute('data-visible', false);
         } else {
-          dropdownList[i].setAttribute("aria-expanded", true);
-          dropdownList[i].setAttribute("data-visible", true);
+          dropdownList[i].setAttribute('aria-expanded', true);
+          dropdownList[i].setAttribute('data-visible', true);
         }
       } else {
-        dropdownList[i].setAttribute("aria-expanded", false);
-        dropdownList[i].setAttribute("data-visible", false);
+        dropdownList[i].setAttribute('aria-expanded', false);
+        dropdownList[i].setAttribute('data-visible', false);
       }
     }
   } else {
     dropdownList.forEach((element) => {
-      if (element.getAttribute("data-visible") === "true") {
-        element.setAttribute("aria-expanded", false);
-        element.setAttribute("data-visible", false);
+      if (element.getAttribute('data-visible') === 'true') {
+        element.setAttribute('aria-expanded', false);
+        element.setAttribute('data-visible', false);
       }
     });
   }
-});
-// Footer navigation buttons
-footerNav.addEventListener("click", (e) => {
-  if (e.target.hasAttribute("data-panel-btn")) {
-    for (let i = 0; i < panels.length; i++) {
-      panels[i].classList.remove("expand");
-    }
-    let panel = e.target.getAttribute("data-panel-btn");
+}
+// footer navigation buttons
+function panelDisplay(elem) {
+  if (elem.hasAttribute('data-panel-btn')) {
+    // for (let i = 0; i < panels.length; i++) {
+    //   panels[i].classList.remove('expand');
+    // }
+    let panel = elem.getAttribute('data-panel-btn');
     for (let i = 0; i < panels.length; i++) {
       if (panel == i) {
         panelIndex = i;
-        panelsContainer.classList.add("expand");
-        panels[i].classList.add("expand");
-        break;
+        panelsContainer.classList.add('expand');
+        panels[i].classList.add('expand');
+        // break;
+      }else {
+        panels[i].classList.remove('expand');
       }
     }
   }
-});
-panelsContainer.addEventListener("click", (e) => {
+}
+// open-close panels
+panelsContainer.addEventListener('click', (e) => {
   let isClickInsideElement = panels[panelIndex].contains(e.target);
   if (!isClickInsideElement) {
     // Click is outside the panel element
-    panels[panelIndex].classList.remove("expand");
-    panelsContainer.classList.remove("expand");
+    panels[panelIndex].classList.remove('expand');
+    panelsContainer.classList.remove('expand');
   }
 });

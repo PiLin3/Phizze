@@ -7,21 +7,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles/normalize.css" />
-    <link rel="stylesheet" href="/styles/index.css" />
-    <link rel="stylesheet" href="styles/kinematics.css" />
-    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <meta
+      name="description"
+      content="Learn kinematics princibles position, velocity, and acceleration using interactive simulation."
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../imgs/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../imgs/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../imgs/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../../imgs/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../../imgs/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- allows you to import models into your scene -->
-    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
-    <title>Kinematics-Velocity/acceleration/displacement Simulator</title>
+    <title>Kinematics-Velocity/acceleration/displacement simulator</title>
   </head>
   <body>
     <header id="main-banner">
-      <a href="/index.html" class="logo">
-        <img src="/imgs/logo.webp" alt="Phizze logo" />
+      <a href="../../index.html" class="logo">
+        <img src="../../imgs/logo.webp" alt="Phizze logo" />
       </a>
       <nav id="main-nav">
         <button
@@ -65,48 +89,11 @@
     <div class="drop-down-lists-container">
       <div class="dropdown-list ph">
         <div class="list-column">
-          <a
-            href="/simulations/Kinematics/kinematics.html"
-            class="dropdown-item"
-            >kinematics</a
-          >
-          <a href="#" class="dropdown-item">Force</a>
-          <a href="#" class="dropdown-item">Work</a>
-          <a href="#" class="dropdown-item">Density</a>
-        </div>
-        <div class="list-column">
-          <a href="#" class="dropdown-item">kinematics</a>
-          <a href="#" class="dropdown-item">Velocity</a>
-          <a href="#" class="dropdown-item">Acceleration</a>
-          <a href="#" class="dropdown-item">Force</a>
+          <a href="index.html" class="dropdown-item">kinematics</a>
         </div>
       </div>
-      <div class="dropdown-list math">
-        <div class="list-column">
-          <a href="#" class="dropdown-item">kinematics</a>
-          <a href="#" class="dropdown-item">Velocity</a>
-          <a href="#" class="dropdown-item">Acceleration</a>
-          <a href="#" class="dropdown-item">Force</a>
-        </div>
-        <div class="list-column">
-          <a href="#" class="dropdown-item">kinematics</a>
-          <a href="#" class="dropdown-item">Velocity</a>
-          <a href="#" class="dropdown-item">Acceleration</a>
-          <a href="#" class="dropdown-item">Force</a>
-        </div>
-      </div>
-      <div class="dropdown-list eng">
-        <div class="list-column">
-          <a href="#" class="dropdown-item">moment of inertia</a>
-          <a href="#" class="dropdown-item">work</a>
-          <a href="#" class="dropdown-item">materials</a>
-          <a href="#" class="dropdown-item">Load</a>
-        </div>
-        <div class="list-column">
-          <a href="#" class="dropdown-item">Reflection</a>
-          <a href="#" class="dropdown-item">SLab</a>
-        </div>
-      </div>
+      <div class="dropdown-list math"></div>
+      <div class="dropdown-list eng"></div>
     </div>
     <main>
       <div class="ad-template left"></div>
@@ -138,6 +125,9 @@
           <!-- stopwatch section -->
           <div class="timer-tab flex-horizontal">
             <p><span id="seconds">00</span>:<span id="tenths">00</span></p>
+            <button data-panel-btn="3" class="generic-btn mobile">
+              Read about kinematics
+            </button>
             <button type="button" class="fullscreen-btn">&#x26F6;</button>
           </div>
           <div class="btn-container">
@@ -188,24 +178,34 @@
           </div>
           <div class="details flex-vertical">
             <div>
-              <h3>Position / Displacement</h3>
+              <h3>Displacement</h3>
               <p>
-                Equation: <span>s=ut+1&frasl;2at<sup>2</sup></span>
+                Equation:
+                <span>s=v<sub>o</sub>t+(1&frasl;2)at<sup>2</sup></span>
               </p>
             </div>
             <div>
               <h3>Final Velocity</h3>
-              <p>Equation: <span>u=s&frasl;t-1&frasl;2at</span></p>
+              <p>Equation: <span>v=v<sub>o</sub>+at</span></p>
             </div>
             <div>
               <h3>Acceleration</h3>
-              <p>Equation: <span>a=2s&frasl;t2-2u&frasl;t</span></p>
+              <p>
+                Equation:
+                <span>a=(2s&frasl;t<sup>2</sup>)-(2v<sub>o</sub>&frasl;t)</span>
+              </p>
             </div>
             <div>
               <p>s = displacement</p>
-              <p>u = initial velocity</p>
+              <p>v<sub>o</sub> = initial velocity</p>
+              <p>v = final velocity</p>
               <p>a = acceleration</p>
               <p>t = time</p>
+            </div>
+            <div>
+              <button data-panel-btn="3" class="generic-btn">
+                Read about kinematics
+              </button>
             </div>
           </div>
         </div>
@@ -234,7 +234,9 @@
               required
             ></textarea>
           </div>
-          <button type="submit" value="Submit">Submit</button>
+          <button type="submit" class="generic-btn" value="Submit">
+            Submit
+          </button>
         </form>
       </div>
       <div class="panel">
@@ -252,13 +254,16 @@
       </div>
       <div class="panel">
         <figure>
-          <img src="/imgs/profile-pic.webp" alt="a picture on Mahmoud Hadman" />
-          <figcaption>Founder: Mahmoud Hamdan</figcaption>
+          <img
+            src="../../imgs/profile-pic.webp"
+            alt="a picture on Mahmoud Hadman"
+          />
+          <figcaption>Developer: Mahmoud Hamdan</figcaption>
         </figure>
         <h3>About Phizze</h3>
         <p>
           Phizze.com is an educational platform that provides learning by
-          interacting with simulations and random generated quizes.
+          interacting with simulations.
         </p>
         <p>
           The idea started when I was learning about mathmatics and physics
@@ -271,6 +276,70 @@
           through my own curiosity for learning and knowledge Phizze was porn.
         </p>
       </div>
+      <div class="panel">
+        <h3>Kinematics</h3>
+        <p>
+          Kinematics is the study of motion, and is used to explain the movement
+          of objects without considering what is causing it. It includes
+          concepts such as: distance or displacement, speed or velocity, and
+          acceleration. To start our journey in understanding the motion of
+          objects, first we must be able to distinguish between Distance /
+          Displacement, Speed / Velocity, Scaler and Vector quantities.
+        </p>
+        <h4>Scaler vs Vector quantities</h4>
+        <p>
+          Scalers and vectors are tow concepts, used to describe different
+          quantities. <strong>A scaler is a "magnitude" only quantity</strong>,
+          it only cares about how much of something there is, for example a
+          tempreture of 25 &#8451;, an area of 10m<sup>2</sup>, a distance of
+          100m, and a speed of 80km/h are all scaler quantities. On the other
+          hand <strong>a vector is a "magnitude & direction" quantity </strong>,
+          which means it not only cares about how much of something there is but
+          also about its direction, example of vector quantities are a
+          displacement 5m to the east, a force 8<sub>N</sub> to the left, or a
+          forward acceleration of 2m/s<sup>2</sup>.
+        </p>
+        <p>
+          So now after we have been introduced to the concept of scalers and
+          vectors we can explain the difference between distance (a scaler
+          quantity), and displacement (a vector quantity), os if we said that
+          somthing moved a 5 meters distance we don't care if it moved to the
+          right, left, up or down, we just care about the fact that it moved 5
+          meters, but if something was displaced 5 meters, we must stat if it
+          was displaced to the right, left , up or down. The same difference
+          applies to speed (scaler quantity) vs velocity (vector quantity).
+        </p>
+        <h4>Kinematic Equations</h4>
+        <p>
+          There are Five variables we can solve for using kinematics equation:
+        </p>
+        <ul>
+          <li>s: Displacement</li>
+          <li>v<sub>o</sub>: Initial velocity</li>
+          <li>v: Final velocity</li>
+          <li>a: Constant acceleration</li>
+          <li>t: Time interval</li>
+        </ul>
+        <p>
+          Given that an object is moving with a constant accelereation you can
+          solve for any of the kinematic varibales "displacement, initial/final
+          velocities, time, or acceleration", using the folowing equations:
+        </p>
+        <ul>
+          <li><span>v=v<sub>o</sub>+at</span></li>
+          <li>
+            <span>s=v<sub>o</sub>t+(1&frasl;2)at<sup>2</sup></span>
+          </li>
+          <li>
+            <span>a=(2s&frasl;t<sup>2</sup>)-(2v<sub>o</sub>&frasl;t)</span>
+          </li>
+        </ul>
+        <p>
+          To get an in depth feeling of how they work, you can check the
+          simulation and compare the graphs' output with the equations for each
+          variable.
+        </p>
+      </div>
     </div>
     <footer>
       <p>Phizze 2022 @ All Rights Reserved</p>
@@ -280,9 +349,5 @@
         <button data-panel-btn="2">About</button>
       </nav>
     </footer>
-    <script src="/scripts/index.js"></script>
-    <script src="scripts/kinematics.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
-    <script src="scripts/charts.js" type="module"></script>
   </body>
 </html>

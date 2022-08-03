@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
+
 module.exports = merge(common, {
   mode: "production",
   output: {
@@ -20,14 +21,15 @@ module.exports = merge(common, {
     ],
   },
   optimization: {
+    usedExports: true,
     minimizer: [
-      `...`,
+      `...`, // extend existing minimizers
       new CssMinimizerPlugin(),
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles/main-[contenthash].css",
+      filename: "[name]-[contenthash].css",
     }),
     new CleanWebpackPlugin(),
   ],
