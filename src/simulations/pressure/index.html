@@ -4,43 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Learn about different subjects in physics, mathmatics, and engineering using interactive simulations."
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
       rel="stylesheet"
     />
+    <meta
+      name="description"
+      content="Learn about pressure, force, and surface area using interactive simulation."
+    />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="imgs/apple-touch-icon.png"
+      href="../../imgs/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="imgs/favicon-32x32.png"
+      href="../../imgs/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="imgs/favicon-16x16.png"
+      href="../../imgs/favicon-16x16.png"
     />
-    <link rel="manifest" href="imgs/site.webmanifest" />
-    <link rel="mask-icon" href="imgs/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="manifest" href="../../imgs/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../../imgs/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Phizze</title>
+    <!-- allows you to import models into your scene -->
+    <title>Force simulator</title>
   </head>
   <body>
     <header id="main-banner">
-      <a href="index.html" class="logo">
-        <img src="imgs/logo.webp" alt="Phizze logo" />
+      <a href="../../index.html" class="logo">
+        <img src="../../imgs/logo.webp" alt="Phizze logo" />
       </a>
       <nav id="main-nav">
         <button
@@ -84,12 +89,10 @@
     <div class="drop-down-lists-container">
       <div class="dropdown-list ph">
         <div class="list-column">
-          <a href="simulations/kinematics/index.html" class="dropdown-item">
+          <a href="../kinematics/index.html" class="dropdown-item">
             Kinematics
           </a>
-          <a href="simulations/pressure/index.html" class="dropdown-item">
-            Pressure
-          </a>
+          <a href="index.html" class="dropdown-item">Pressure</a>
         </div>
       </div>
       <div class="dropdown-list math"></div>
@@ -97,26 +100,62 @@
     </div>
     <main>
       <div class="ad-template left"></div>
-      <div class="cards-container">
-        <div class="card">
-          <a href="simulations/kinematics/index.html">
-            <img
-              src="imgs/kinematics-scr.webp"
-              alt="kinematics simulation screenshot"
-            />
-          </a>
-          <a href="simulations/kinematics/index.html">
-            Kinematics Simulation
-          </a>
+      <div id="simulation-container">
+        <div class="canvas-container">
+          <canvas id="renderCanvas" width="100" height="100"></canvas>
         </div>
-        <div class="card">
-          <a href="simulations/pressure/index.html">
-            <img
-              src="imgs/pressure-scr.webp"
-              alt="pressure simulation screenshot"
+        <div id="ui">
+          <div class="output-value">
+            <span>Pressure :</span>
+            <span id="pressure">10</span>
+            <span>(Pa)</span>
+          </div>
+          <div class="ui-btns-container">
+            <button data-panel-btn="3" class="generic-btn">
+              Read about pressure
+            </button>
+            <button type="button" id="fullscreen-btn" class="generic-btn">
+              Fullscreen Mode
+            </button>
+          </div>
+          <!-- user input section -->
+          <label for="force" class="output-value">
+            <span>Force :</span>
+            <span id="forceUi">50</span>
+            <span>(<small>N</small>)</span>
+          </label>
+          <div class="slider-container">
+            <span>1</span>
+            <input
+              type="range"
+              id="force"
+              data-input="force"
+              name="force"
+              value="50"
+              min="1"
+              max="100"
             />
-          </a>
-          <a href="simulations/pressure/index.html"> Pressure Simulation </a>
+            <span>100</span>
+          </div>
+          <label for="area" class="output-value">
+            <span>Area :</span>
+            <span id="areaUi">5</span>
+            <span>(m<sup>2</sup>)</span>
+          </label>
+          <div class="slider-container">
+            <span>1</span>
+            <input
+              type="range"
+              name="area"
+              data-input="area"
+              id="area"
+              value="5"
+              min="1"
+              max="10"
+              step="0.25"
+            />
+            <span>10</span>
+          </div>
         </div>
       </div>
       <div class="ad-template right"></div>
@@ -153,7 +192,7 @@
         <p>
           If you would like to make a donation to support the Phizze platform
           and help us grow further, and expand on our mission! You can do so
-          through the folowing Paypal account:
+          through the foloing Paypal account:
         </p>
         <p>
           Paypal:
@@ -171,7 +210,10 @@
       </div>
       <div class="panel">
         <figure>
-          <img src="imgs/profile-pic.webp" alt="a picture on Mahmoud Hadman" />
+          <img
+            src="../../imgs/profile-pic.webp"
+            alt="a picture on Mahmoud Hadman"
+          />
           <figcaption>Developer: Mahmoud Hamdan</figcaption>
         </figure>
         <h3>About Phizze</h3>
@@ -190,7 +232,22 @@
           through my own curiosity for learning and knowledge Phizze was porn.
         </p>
       </div>
-      <div class="panel"></div>
+      <div class="panel">
+        <h3>Pressure</h3>
+        <p>
+          Pressure is defined as the applied force over a surface area
+          <span class="equation">( P = F/A )</span>. From the pressure equation
+          you can see that it's proportional to the amount of applied force, and
+          inversely proportional to the surface area, which means if we keep the
+          force the same and increase the surface area to which it's applied
+          then we will reduce the pressure on that area and vice versa.
+        </p>
+        <p>
+          To get an in depth feeling of how Pressure, Force, and Area are
+          related, you can check the simulation and see the effects of changing
+          the applied force or the surface area on pressure.
+        </p>
+      </div>
     </div>
     <footer>
       <p>Phizze 2022 @ All Rights Reserved</p>

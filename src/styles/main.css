@@ -1,5 +1,6 @@
 :root {
   --main-color: #ffffff;
+  --extra-light-color: #f5f5f5;
   --light-color: #808080;
   --middle-color: #3e3e3e;
   --dark-color: #1b1b1b;
@@ -22,6 +23,10 @@ body {
   font-size: var(--main-font-size);
   background-color: var(--main-color);
   background-color: #ffffff;
+  overscroll-behavior: none;
+}
+canvas:focus {
+  outline: none;
 }
 a, button {
   text-decoration: none;
@@ -294,7 +299,7 @@ main {
   -webkit-backdrop-filter: blur(2px) grayscale(100%); /* for safari */
   opacity: 0;
   z-index: 3;
-  animation: panel-container-opacity 500ms forwards;
+  animation: panel-container-opacity 250ms forwards;
 }
 .panel {
   overflow: auto;
@@ -311,7 +316,7 @@ main {
   border-radius: 1em;
   opacity: 0;
   background-color: var(--main-color);
-  animation: panel-expand 500ms forwards;
+  animation: panel-expand 250ms forwards;
 }
 #panels-container.expand {
   display: flex;
@@ -345,9 +350,10 @@ main {
   font-size: 1em;
   line-height: 1.35;
 }
-.panel p > span {
-  font-size: 0.9em;
+.panel p > .generic-btn {
   font-weight: bold;
+  padding: 0.25em 1em;
+  margin-left: 0.5em;
 }
 .panel figure {
   position: relative;

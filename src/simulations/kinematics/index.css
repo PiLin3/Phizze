@@ -1,5 +1,4 @@
 :root {
-  --light-marker-color: #f5f5f5;
   --elements-margin: 5%;
   --ui-vertical-gap: 1vh;
   --main-banner-height: 6vh !important;
@@ -8,10 +7,6 @@
   --mobile-main-content-height: 86vh !important;
   --mobile-dropdown-top-position: 10vh !important;
 }
-canvas:focus {
-  outline: none;
-}
-
 .simulation-container {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -32,12 +27,11 @@ canvas:focus {
 }
 #renderCanvas {
   background-color: var(--main-color);
-  touch-action: none;
   width: 100%;
   height: 25%;
-  border-top: 0.5em solid var(--light-marker-color);
-  border-bottom: 0.5em solid var(--light-marker-color);
-  border-left: 0.5em solid var(--light-marker-color);
+  border-top: 0.5em solid var(--extra-light-color);
+  border-bottom: 0.5em solid var(--extra-light-color);
+  border-left: 0.5em solid var(--extra-light-color);
   border-radius: 0.9em 0 0 0;
 }
 .charts-btns-container {
@@ -46,8 +40,8 @@ canvas:focus {
 .charts-container {
   background-color: #ffffff;
   height: 75%;
-  border-bottom: 0.5em solid var(--light-marker-color);
-  border-left: 0.5em solid var(--light-marker-color);
+  border-bottom: 0.5em solid var(--extra-light-color);
+  border-left: 0.5em solid var(--extra-light-color);
   border-radius: 0 0 0 0.9em;
 }
 .chart {
@@ -55,7 +49,7 @@ canvas:focus {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  border-top: 0.2em solid var(--light-marker-color);
+  border-top: 0.2em solid var(--extra-light-color);
   transition: all 150ms ease-in-out;
 }
 .chart button {
@@ -66,7 +60,7 @@ canvas:focus {
   width: 2.5em;
   height: 1em;
   padding: 0.1em;
-  background-color: var(--light-marker-color);
+  background-color: var(--extra-light-color);
   transform: rotate(0deg);
   transition: all 140ms ease-in-out;
   z-index: 2;
@@ -77,7 +71,7 @@ canvas:focus {
 .shrink {
   height: 1em;
   min-height: 1.4em;
-  background-color: var(--light-marker-color);
+  background-color: var(--extra-light-color);
   margin-bottom: 1%;
 }
 .shrink > canvas {
@@ -90,7 +84,7 @@ canvas:focus {
 #ui {
   overflow: hidden;
   justify-content: space-between;
-  background-color: var(--light-marker-color);
+  background-color: var(--extra-light-color);
   border-radius: 0 0.9em 0.9em 0;
   padding: 0.5em;
   margin: 1.5em 1.5em 1.5em 0;
@@ -147,13 +141,13 @@ canvas:focus {
 }
 .input-element > * + * {
   margin-top: 0.1em;
-  border-top: 0.1em solid var(--light-marker-color);
+  border-top: 0.1em solid var(--extra-light-color);
 }
 .input-element label {
   font-size: 0.9em;
   text-align: center;
 }
-/* SLiders styles */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SLider styles >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 .slider-container {
   display: flex;
   justify-content: center;
@@ -195,9 +189,31 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]:focus::-webkit-slider-runnable-track {
   background-color: var(--main-hover-color);
 }
+/* firefox */
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: var(--main-hover-color);
+  border-radius: 25px;
+}
+input[type=range]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 1);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+input[type=range]:focus::-moz-range-track {
+  background-color: var(--main-hover-color);
+}
 .range-value {
   position: absolute;
-  top: -50%;
+  top: -1.45em;
   opacity: 0;
   transition: opacity 350ms ease-in-out;
 }
@@ -231,26 +247,26 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   margin-left: -5px;
   margin-top: -1px;
 }
-/* details styles */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Details Styles >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 .details {
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: var(--main-color);
   height: 100%;
   padding: 0.5em;
   border-radius: 0.25em;
   margin-top: var(--ui-vertical-gap);
 }
 .details > * + * {
-  border-top: 0.25em solid var(--light-marker-color);
+  border-top: 0.25em solid var(--extra-light-color);
   padding-top: var(--elements-margin);
 }
-.details h3 {
+.details h3,
+.details p {
   font-size: 0.85em;
   margin: 0;
 }
 .details p {
-  font-size: 0.85em;
-  margin: 0.5em 0 0 0;
+  margin-top: 0.5em;
 }
 .details span {
   display: inline-block;
@@ -281,7 +297,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   .input-element label,
   .generic-btn.mobile,
   .slider-container {
-    font-size: 0.75em;
+    font-size: 0.8em;
+  }
+  .range-value {
+    top: -1.85em;
   }
   .details {
     font-size: 0.9em;
@@ -294,7 +313,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   .simulation-container {
     grid-template-columns: 100%;
     grid-template-rows: 19vh 56vh;
-    background-color: var(--light-marker-color);
+    background-color: var(--extra-light-color);
     width: 100vw;
     height: 75vh;
   }
@@ -313,7 +332,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     justify-content: space-around;
     align-items: center;
     height: 8%;
-    background-color: var(--light-marker-color);
+    background-color: var(--extra-light-color);
     padding: 1.5% 0;
     font-size: 0.85em;
   }
@@ -392,7 +411,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     margin: 12px 0;
   }
   .range-value {
-    top: -100%;
+    top: -2.5em;
   }
   .details {
     display: none;

@@ -1,7 +1,6 @@
 import '../styles/normalize.css';
 import '../styles/main.css';
 import searchData from '../json/searchData.json';
-
 const dropdownList = document.querySelectorAll('.dropdown-list');
 const panelsContainer = document.getElementById('panels-container');
 const panels = panelsContainer.getElementsByClassName('panel');

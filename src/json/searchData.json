@@ -3,9 +3,18 @@
     "name": "Kinematics",
     "tags": ["Kinematics", "Velocity", "Speed", "Position", "Acceleration", "Displacement", "Movement"],
     "category": "Physics",
-    "link": "../simulations/Kinematics/index.html",
-    "img": "../imgs/kinematics-scr-5abf9a471216c5c1beed.webp",
+    "link": "/simulations/kinematics/index.html",
+    "img": "/imgs/kinematics-scr-5abf9a471216c5c1beed.webp",
     "alt": "kinematics simulation screenshot",
-    "a": "kinematics simulation"
+    "a": "Kinematics Simulation"
+  },
+  {
+    "name": "Pressure",
+    "tags": ["Pressure", "Force", "Area", "Stress"],
+    "category": "Physics",
+    "link": "/simulations/pressure/index.html",
+    "img": "/imgs/pressure-scr-c94896e2c645cba6b185.webp",
+    "alt": "pressure simulation screenshot",
+    "a": "Pressure Simulation"
   }
 ]

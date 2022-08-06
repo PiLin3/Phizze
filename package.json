@@ -1,7 +1,7 @@
 {
   "name": "phizze",
   "version": "1.0.0",
-  "description": "",
+  "description": "Physics, Mathmatics, and Engineering simulations web-application.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",

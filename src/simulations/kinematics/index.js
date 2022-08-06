@@ -6,8 +6,8 @@ import { Scene } from '@babylonjs/core/scene';
 import { HemisphericLight } from '@babylonjs/core/Lights/hemisphericLight';
 import { ArcRotateCamera } from '@babylonjs/core/Cameras/arcRotateCamera';
 import { SceneLoader } from '@babylonjs/core/Loading/sceneLoader';
-import "@babylonjs/loaders/glTF";
 import { Vector3 } from '@babylonjs/core/Maths/math.vector';
+import "@babylonjs/loaders/glTF";
 
 import kinematicsScene from "../assets/kinematics-scene.glb";
 Chart.register(LineController, LineElement, PointElement, LinearScale, Legend, Tooltip);
@@ -40,8 +40,6 @@ const accData = {
   }]
 };
 // Charts configurations
-
-// Position chart configuration
 const posConfig = {
   type: 'line',
   data: posData,
@@ -104,7 +102,6 @@ const posConfig = {
     maintainAspectRatio: false
   }
 };
-// Velocity chart configuration
 const velConfig = {
   type: 'line',
   data: velData,
@@ -167,7 +164,6 @@ const velConfig = {
     maintainAspectRatio: false
   }
 };
-// Acceleration chart configuration
 const accConfig = {
   type: 'line',
   data: accData,
@@ -293,8 +289,7 @@ canvasContainer.addEventListener('click', (e) => {
     }
   }
 })
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// Babylon variables
+// Babylon section
 const canvas = document.getElementById("renderCanvas"); // Get the canvas element
 const engine = new Engine(canvas, true); // Generate the BABYLON 3D engine
 // User inputs
@@ -325,7 +320,7 @@ let simTime;
 let finalVelocity;
 let initialVelocity;
 // Fullscreen variables
-const fullscreenbtn = document.querySelector('.fullscreen-btn');
+const fullscreenBtn = document.querySelector('.fullscreen-btn');
 const simScreen = document.querySelector(".simulation-container");
 let browser;
 // Mobile variables 
@@ -354,7 +349,6 @@ function setBubble(range, bubble) {
     bubble.classList.remove('show');
   }, 500)
 }
-// Babylon JS setup >>>>>>>>>>>>>>>>>>>>
 // Create a new scene
 const createScene = function () {
   const scene = new Scene(engine);
@@ -468,13 +462,13 @@ function startTimer() {
   }
 }
 // Fullscreen switch
-fullscreenbtn.addEventListener('click', () => {
+fullscreenBtn.addEventListener('click', () => {
   if (window.innerHeight == screen.height) {
     // Exit fullscreen
+    readMoreBtns.forEach(btn => {
+      btn.disabled = false;
+    });
     if (browser == 'ch') {
-      readMoreBtns.forEach(btn => {
-        btn.disabled = false;
-      });
       document.exitFullscreen();
     } else if (browser == 'saf') {
       /* Safari */
@@ -485,10 +479,10 @@ fullscreenbtn.addEventListener('click', () => {
     }
   } else {
     // Enter fullscreen
+    readMoreBtns.forEach(btn => {
+      btn.disabled = true;
+    });
     if (simScreen.requestFullscreen) {
-      readMoreBtns.forEach(btn => {
-        btn.disabled = true;
-      });
       simScreen.requestFullscreen();
       browser = 'ch';
     } else if (simScreen.webkitRequestFullscreen) {

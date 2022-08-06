@@ -1,0 +1,174 @@
+:root {
+  --elements-margin: 5%;
+  --ui-vertical-gap: 1vh;
+  --main-banner-height: 6vh !important;
+  --main-content-height: 90vh !important;
+  --footer-height: 4vh !important;
+  --mobile-main-content-height: 86vh !important;
+  --mobile-dropdown-top-position: 10vh !important;
+}
+.generic-btn{
+  font-size: 0.9em;
+  width: fit-content;
+  padding: 0.4em 1.5em;
+  border-radius: 0.5em;
+  color: var(--main-color);
+  background-color: var(--main-hover-color);
+}
+.generic-btn:hover,
+.fullscreen-btn:hover {
+  background-color: #0356ef;
+}
+
+#simulation-container {
+  height: 90vh;
+  width: 75vw;
+  padding: 1.5em;
+}
+.canvas-container {
+  width: 100%;
+  height: 70%;
+  border-radius: 0.9em 0.9em 0 0;
+}
+#renderCanvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0.5em solid var(--main-hover-color);
+  border-bottom: none;
+  border-radius: 0.9em 0.9em 0 0;
+}
+#ui {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 1.25fr;
+  align-items: center;
+  gap: 0.5em;
+  overflow: hidden;
+  width: 100%;
+  height: 30%;
+  padding: 0.75em;
+  border: 0.5em solid var(--main-hover-color);
+  border-top: none;
+  border-radius: 0 0 0.9em 0.9em;
+  background-color: var(--extra-light-color);
+}
+.output-value {
+  display: grid;
+  grid-template-columns: 37% 40% 23%;
+  align-items: center;
+  gap: 0.5em;
+}
+.output-value :nth-child(2) {
+  text-align: center;
+  padding: 0.3em 0;
+  border-radius: 0.25em;
+  line-height: 1;
+  background-color: var(--main-color);
+}
+.ui-btns-container {
+  display: flex;
+  grid-column: span 2 / 4;
+  margin-left: auto;
+  gap: 0.5em;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SLider styles >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.slider-container {
+  display: flex;
+  align-items: center;
+  grid-column: span 2 / 4;
+  gap: 0.5em;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  flex-grow: 1;
+  margin: 0.75em 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: var(--main-hover-color);
+  border-radius: 25px;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 1);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background-color: var(--main-hover-color);
+}
+/* firefox */
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: var(--main-hover-color);
+  border-radius: 25px;
+}
+input[type=range]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 1);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+input[type=range]:focus::-moz-range-track {
+  background-color: var(--main-hover-color);
+}
+.equation {
+  white-space: nowrap;
+  font-weight: bold;
+}
+@media screen and (max-width: 60.75rem) {
+  #ui {
+    font-size: 0.9em;
+    grid-template-columns: 1.5fr 1.25fr 1.25fr;
+  }
+}
+
+@media screen and (max-width: 46.25rem) {
+  #simulation-container {
+    height: 75vh;
+    width: 100vw;
+    padding: 1em;
+  }
+  .canvas-container {
+    height: 50%;
+  }
+  #ui {
+    height: 50%;
+  }
+  .ui-btns-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .ui-btns-container > button {
+    width: 100%;
+  }
+  .output-value {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .output-value :first-child {
+    width: 100%;
+    grid-column: span 2
+  }
+}
