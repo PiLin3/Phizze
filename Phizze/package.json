@@ -1,0 +1,32 @@
+{
+  "name": "phizze",
+  "version": "1.0.0",
+  "description": "Physics, Mathmatics, and Engineering simulations web-application.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "keywords": [],
+  "author": "Mahmoud Hamdan",
+  "license": "ISC",
+  "devDependencies": {
+    "@babylonjs/core": "^5.19.0",
+    "@babylonjs/gui": "^5.18.0",
+    "@babylonjs/loaders": "^5.17.1",
+    "@babylonjs/procedural-textures": "^5.19.0",
+    "chart.js": "^3.8.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^4.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3",
+    "webpack-merge": "^5.8.0"
+  }
+}

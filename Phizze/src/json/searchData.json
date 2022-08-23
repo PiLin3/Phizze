@@ -1,0 +1,81 @@
+[
+  {
+    "name": "Kinematics",
+    "tags": [
+      "Kinematics",
+      "Velocity",
+      "Speed",
+      "Position",
+      "Acceleration",
+      "Displacement",
+      "Movement"
+    ],
+    "category": "Simulation",
+    "link": "/simulations/kinematics/index.html",
+    "img": "/imgs/kinematics-scr-3cccc628341aefba5f8d.webp",
+    "alt": "kinematics simulation screenshot",
+    "a": "Kinematics"
+  },
+  {
+    "name": "Pressure",
+    "tags": [
+      "Pressure",
+      "Force",
+      "Area",
+      "Stress"
+    ],
+    "category": "Simulation",
+    "link": "/simulations/pressure/index.html",
+    "img": "/imgs/pressure-scr-30f346d7c9bd092565f6.webp",
+    "alt": "pressure simulation screenshot",
+    "a": "Pressure"
+  },
+  {
+    "name": "Resistance",
+    "tags": [
+      "Resistance",
+      "Wire",
+      "Electrical",
+      "Current",
+      "Resistivity"
+    ],
+    "category": "Simulation",
+    "link": "/simulations/resistance/index.html",
+    "img": "/imgs/resistance-scr-2a7530776f1aca2a0834.webp",
+    "alt": "electrical resistance simulation screenshot",
+    "a": "Electrical Resistance"
+  },
+  {
+    "name": "Voltage",
+    "tags": [
+      "Potential difference",
+      "Current",
+      "Volts",
+      "Electricity",
+      "Circuit"
+    ],
+    "category": "Simulation",
+    "link": "/simulations/voltage/index.html",
+    "img": "/imgs/voltage-scr-19f65d3626cfc10596ea.webp",
+    "alt": "voltage simulation screenshot",
+    "a": "Voltage"
+  },
+  {
+    "name": "Density",
+    "tags": [],
+    "category": "Table",
+    "link": "/resources/density/index.html",
+    "img": "/imgs/density-table-scr-915d0427fcf75a4c3506.webp",
+    "alt": "density table screenshot",
+    "a": "Materials density table"
+  },
+  {
+    "name": "Resistivity",
+    "tags": [],
+    "category": "Table",
+    "link": "/resources/resistivity/index.html",
+    "img": "/imgs/resistivity-table-scr-e116dcc8909fde7b56dc.webp",
+    "alt": "resistivity table screenshot",
+    "a": "Materials resistivity table"
+  }
+]

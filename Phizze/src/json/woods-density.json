@@ -1,0 +1,542 @@
+[
+  {
+    "name": "Afrormosia",
+    "si": "710",
+    "us": "44"
+  },
+  {
+    "name": "Agba",
+    "si": "510",
+    "us": "32"
+  },
+  {
+    "name": "Alder",
+    "si": "420 - 680",
+    "us": "26 - 42"
+  },
+  {
+    "name": "Apple",
+    "si": "650 - 850",
+    "us": "41 - 53"
+  },
+  {
+    "name": "Ash - black",
+    "si": "540",
+    "us": "34"
+  },
+  {
+    "name": "Ash - European",
+    "si": "710",
+    "us": "44"
+  },
+  {
+    "name": "Ash - white",
+    "si": "650 - 850",
+    "us": "41 - 53"
+  },
+  {
+    "name": "Aspen",
+    "si": "420",
+    "us": "26"
+  },
+  {
+    "name": "Balsa",
+    "si": "110 - 140",
+    "us": "7 - 9"
+  },
+  {
+    "name": "Bamboo",
+    "si": "310 - 400",
+    "us": "19 - 25"
+  },
+  {
+    "name": "Basswood",
+    "si": "320 - 590",
+    "us": "20 - 37"
+  },
+  {
+    "name": "Beech",
+    "si": "700 - 900",
+    "us": "44 - 56"
+  },
+  {
+    "name": "Birch",
+    "si": "510 - 770",
+    "us": "32 - 48"
+  },
+  {
+    "name": "Birch - British",
+    "si": "670",
+    "us": "42"
+  },
+  {
+    "name": "Birch - European",
+    "si": "670",
+    "us": "42"
+  },
+  {
+    "name": "Blue gum",
+    "si": "1000",
+    "us": "62"
+  },
+  {
+    "name": "Box",
+    "si": "950 - 1160",
+    "us": "59 - 72"
+  },
+  {
+    "name": "Butternut",
+    "si": "380",
+    "us": "24"
+  },
+  {
+    "name": "Cedar",
+    "si": "490 - 570",
+    "us": "31 - 36"
+  },
+  {
+    "name": "Cedar of Lebanon",
+    "si": "580",
+    "us": "36"
+  },
+  {
+    "name": "Cedar - western red",
+    "si": "380",
+    "us": "24"
+  },
+  {
+    "name": "Cherry",
+    "si": "630 - 900",
+    "us": "39 - 56"
+  },
+  {
+    "name": "Cherry - European",
+    "si": "630",
+    "us": "39"
+  },
+  {
+    "name": "Chestnut - sweet",
+    "si": "560",
+    "us": "35"
+  },
+  {
+    "name": "Cottonwood",
+    "si": "410",
+    "us": "26"
+  },
+  {
+    "name": "Cypress",
+    "si": "510",
+    "us": "32"
+  },
+  {
+    "name": "Dogwood",
+    "si": "760",
+    "us": "47"
+  },
+  {
+    "name": "Douglas Fir",
+    "si": "530",
+    "us": "33"
+  },
+  {
+    "name": "Ebony",
+    "si": "1110 - 1330",
+    "us": "69 - 83"
+  },
+  {
+    "name": "Elm",
+    "si": "540 - 600",
+    "us": "34 - 37"
+  },
+  {
+    "name": "Elm - American",
+    "si": "570",
+    "us": "36"
+  },
+  {
+    "name": "Elm - Dutch",
+    "si": "560",
+    "us": "35"
+  },
+  {
+    "name": "Elm - English",
+    "si": "550 - 600",
+    "us": "34 - 37"
+  },
+  {
+    "name": "Elm - Rock",
+    "si": "820",
+    "us": "51"
+  },
+  {
+    "name": "Elm - Wych",
+    "si": "690",
+    "us": "43"
+  },
+  {
+    "name": "Gaboon",
+    "si": "430",
+    "us": "27"
+  },
+  {
+    "name": "Greenheart",
+    "si": "1040",
+    "us": "65"
+  },
+  {
+    "name": "Gum - Black",
+    "si": "590",
+    "us": "37"
+  },
+  {
+    "name": "Gum - Blue",
+    "si": "820",
+    "us": "51"
+  },
+  {
+    "name": "Gum - Red",
+    "si": "540",
+    "us": "34"
+  },
+  {
+    "name": "Hackberry",
+    "si": "620",
+    "us": "39"
+  },
+  {
+    "name": "Hemlock - western",
+    "si": "500",
+    "us": "31"
+  },
+  {
+    "name": "Hickory",
+    "si": "600 - 930",
+    "us": "37 - 58"
+  },
+  {
+    "name": "Holly",
+    "si": "760",
+    "us": "47"
+  },
+  {
+    "name": "Iroko",
+    "si": "660",
+    "us": "41"
+  },
+  {
+    "name": "Juniper",
+    "si": "560",
+    "us": "35"
+  },
+  {
+    "name": "Keruing",
+    "si": "740",
+    "us": "46"
+  },
+  {
+    "name": "Larch",
+    "si": "500 - 560",
+    "us": "31 - 35"
+  },
+  {
+    "name": "Lignum Vitae",
+    "si": "1170 - 1330",
+    "us": "73 - 83"
+  },
+  {
+    "name": "Lime - European",
+    "si": "560",
+    "us": "35"
+  },
+  {
+    "name": "Locust",
+    "si": "670 - 710",
+    "us": "42 - 44"
+  },
+  {
+    "name": "Logwood",
+    "si": "910",
+    "us": "57"
+  },
+  {
+    "name": "Madrone",
+    "si": "740",
+    "us": "46"
+  },
+  {
+    "name": "Magnolia",
+    "si": "570",
+    "us": "36"
+  },
+  {
+    "name": "Mahogany - African",
+    "si": "500 - 850",
+    "us": "31 - 53"
+  },
+  {
+    "name": "Mahogany - Cuban",
+    "si": "660",
+    "us": "41"
+  },
+  {
+    "name": "Mahogany - Honduras",
+    "si": "650",
+    "us": "41"
+  },
+  {
+    "name": "Mahogany - Spanish",
+    "si": "850",
+    "us": "53"
+  },
+  {
+    "name": "Maple",
+    "si": "620 - 750",
+    "us": "39 - 47"
+  },
+  {
+    "name": "Meranti - dark red",
+    "si": "710",
+    "us": "44"
+  },
+  {
+    "name": "Myrtle",
+    "si": "660",
+    "us": "41"
+  },
+  {
+    "name": "Oak",
+    "si": "600 - 900",
+    "us": "37 - 56"
+  },
+  {
+    "name": "Oak - American Red",
+    "si": "740",
+    "us": "46"
+  },
+  {
+    "name": "Oak - American White",
+    "si": "770",
+    "us": "48"
+  },
+  {
+    "name": "Oak - English Brown",
+    "si": "740",
+    "us": "46"
+  },
+  {
+    "name": "Obeche",
+    "si": "390",
+    "us": "24"
+  },
+  {
+    "name": "Oregon Pine",
+    "si": "530",
+    "us": "33"
+  },
+  {
+    "name": "Parana Pine",
+    "si": "560",
+    "us": "35"
+  },
+  {
+    "name": "Pear",
+    "si": "610 - 730",
+    "us": "38 - 46"
+  },
+  {
+    "name": "Pecan",
+    "si": "770",
+    "us": "48"
+  },
+  {
+    "name": "Persimmon",
+    "si": "900",
+    "us": "56"
+  },
+  {
+    "name": "Philippine Red Luan",
+    "si": "590",
+    "us": "37"
+  },
+  {
+    "name": "Pine - Corsican",
+    "si": "510",
+    "us": "32"
+  },
+  {
+    "name": "Pine - pitch",
+    "si": "670",
+    "us": "42"
+  },
+  {
+    "name": "Pine - radiata",
+    "si": "480",
+    "us": "30"
+  },
+  {
+    "name": "Pine - Scots",
+    "si": "510",
+    "us": "32"
+  },
+  {
+    "name": "Pine - white",
+    "si": "350 - 500",
+    "us": "22 - 31"
+  },
+  {
+    "name": "Pine - yellow",
+    "si": "420",
+    "us": "26"
+  },
+  {
+    "name": "Plane - European",
+    "si": "640",
+    "us": "40"
+  },
+  {
+    "name": "Plum",
+    "si": "660 - 780",
+    "us": "41 - 49"
+  },
+  {
+    "name": "Poplar",
+    "si": "350 - 500",
+    "us": "22 - 31"
+  },
+  {
+    "name": "Ramin",
+    "si": "670",
+    "us": "42"
+  },
+  {
+    "name": "Redwood - American",
+    "si": "450",
+    "us": "28"
+  },
+  {
+    "name": "Redwood - European",
+    "si": "510",
+    "us": "32"
+  },
+  {
+    "name": "Rosewood - Bolivian",
+    "si": "820",
+    "us": "51"
+  },
+  {
+    "name": "Rosewood - East Indian",
+    "si": "900",
+    "us": "56"
+  },
+  {
+    "name": "Sapele",
+    "si": "640",
+    "us": "40"
+  },
+  {
+    "name": "Satinwood",
+    "si": "950",
+    "us": "59"
+  },
+  {
+    "name": "Spruce",
+    "si": "480 - 780",
+    "us": "30 - 49"
+  },
+  {
+    "name": "Spruce - Canadian",
+    "si": "450",
+    "us": "28"
+  },
+  {
+    "name": "Spruce - Norway",
+    "si": "430",
+    "us": "27"
+  },
+  {
+    "name": "Spruce - Sitka",
+    "si": "450",
+    "us": "28"
+  },
+  {
+    "name": "Spruce - western white",
+    "si": "450",
+    "us": "28"
+  },
+  {
+    "name": "Sycamore",
+    "si": "400 - 600",
+    "us": "25 - 37"
+  },
+  {
+    "name": "Tanguile",
+    "si": "640",
+    "us": "40"
+  },
+  {
+    "name": "Teak - African",
+    "si": "980",
+    "us": "61"
+  },
+  {
+    "name": "Teak - Burma",
+    "si": "740",
+    "us": "46"
+  },
+  {
+    "name": "Teak - Indian",
+    "si": "660 - 980",
+    "us": "41 - 61"
+  },
+  {
+    "name": "Utile",
+    "si": "660",
+    "us": "41"
+  },
+  {
+    "name": "Walnut",
+    "si": "640 - 700",
+    "us": "40 - 44"
+  },
+  {
+    "name": "Walnut - Amer Black",
+    "si": "630",
+    "us": "39"
+  },
+  {
+    "name": "Walnut - Claro",
+    "si": "490",
+    "us": "31"
+  },
+  {
+    "name": "Walnut - European",
+    "si": "570",
+    "us": "36"
+  },
+  {
+    "name": "Water gum",
+    "si": "1000",
+    "us": "62"
+  },
+  {
+    "name": "Whitewood - European",
+    "si": "470",
+    "us": "29"
+  },
+  {
+    "name": "Willow",
+    "si": "400 - 600",
+    "us": "25 - 37"
+  },
+  {
+    "name": "Yew",
+    "si": "670",
+    "us": "42"
+  },
+  {
+    "name": "Zebrawood",
+    "si": "790",
+    "us": "49"
+  }
+]

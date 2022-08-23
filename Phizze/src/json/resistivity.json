@@ -1,0 +1,577 @@
+[
+  {
+    "name": "Air",
+    "value": "(0.001 - 1000) x10<sup>12</sup>",
+    "decimel": 1000000000000000
+  },
+  {
+    "name": "Aluminum",
+    "value": "2.65 x10<sup>-8</sup>",
+    "decimel": 2.65e-8
+  },
+  {
+    "name": "Aluminum alloy 2014, annealed",
+    "value": "3.4 x10<sup>-8</sup>",
+    "decimel": 3.4e-8
+  },
+  {
+    "name": "Aluminum alloy 3003, rolled",
+    "value": "3.7 x10<sup>-8</sup>",
+    "decimel": 3.7e-8
+  },
+  {
+    "name": "Aluminum alloy 360",
+    "value": "6.16 x10<sup>-8</sup>",
+    "decimel": 6.16e-8
+  },
+  {
+    "name": "Aluminum bronze",
+    "value": "1.3 x10<sup>-7</sup>",
+    "decimel": 1.3e-7
+  },
+  {
+    "name": "Antimony",
+    "value": "4.15 x10<sup>-7</sup>",
+    "decimel": 4.15e-7
+  },
+  {
+    "name": "Barium",
+    "value": "3 x10<sup>-7</sup>",
+    "decimel": 3e-7
+  },
+  {
+    "name": "Beryllium",
+    "value": "3.8 x10<sup>-8</sup>",
+    "decimel": 3.8e-8
+  },
+  {
+    "name": "Beryllium copper 25",
+    "value": "7 x10<sup>-8</sup>",
+    "decimel": 7e-8
+  },
+  {
+    "name": "Bismuth",
+    "value": "1.15 x10<sup>-6</sup>",
+    "decimel": 0.00000115
+  },
+  {
+    "name": "Brass",
+    "value": "(6 - 9) x10<sup>-8</sup>",
+    "decimel": 9e-8
+  },
+  {
+    "name": "Brass - 58% cu",
+    "value": "5.9 x10<sup>-8</sup>",
+    "decimel": 5.9e-8
+  },
+  {
+    "name": "Brass - 63% cu",
+    "value": "7.1 x10<sup>-8</sup>",
+    "decimel": 7.1e-8
+  },
+  {
+    "name": "Cadmium",
+    "value": "7.4 x10<sup>-8</sup>",
+    "decimel": 7.4e-8
+  },
+  {
+    "name": "Caesium",
+    "value": "1.88 x10<sup>-7</sup>",
+    "decimel": 1.88e-7
+  },
+  {
+    "name": "Calcium",
+    "value": "3.11 x10<sup>-8</sup>",
+    "decimel": 3.11e-8
+  },
+  {
+    "name": "Calcium",
+    "value": "3.36 x10<sup>-8</sup>",
+    "decimel": 3.36e-8
+  },
+  {
+    "name": "Carbon - amorphous",
+    "value": "(1.5 - 4.5) x10<sup>-5</sup>",
+    "decimel": 0.000045
+  },
+  {
+    "name": "Carbon - diamond",
+    "value": "1 x10<sup>12</sup>",
+    "decimel": 1000000000000
+  },
+  {
+    "name": "Carbon - graphite",
+    "value": "1 x10<sup>-5</sup>",
+    "decimel": 0.00001
+  },
+  {
+    "name": "Carbon steel (1010)",
+    "value": "1.4 x10<sup>-7</sup>",
+    "decimel": 1.4e-7
+  },
+  {
+    "name": "Cast iron",
+    "value": "1 x10<sup>-9</sup>",
+    "decimel": 1e-9
+  },
+  {
+    "name": "Cerium",
+    "value": "7 x10<sup>-8</sup>",
+    "decimel": 7e-8
+  },
+  {
+    "name": "Chromium",
+    "value": "1.3 x10<sup>-7</sup>",
+    "decimel": 1.3e-7
+  },
+  {
+    "name": "Cobalt",
+    "value": "5.6 x10<sup>-8</sup>",
+    "decimel": 5.6e-8
+  },
+  {
+    "name": "Constantan",
+    "value": "4.9 x10<sup>-7</sup>",
+    "decimel": 4.9e-7
+  },
+  {
+    "name": "Copper",
+    "value": "1.7 x10<sup>-8</sup>",
+    "decimel": 1.7e-8
+  },
+  {
+    "name": "Cupronickel (constantan)",
+    "value": "4.5 x10<sup>-7</sup>",
+    "decimel": 4.5e-7
+  },
+  {
+    "name": "Deionized water",
+    "value": "1.8 x10<sup>5</sup>",
+    "decimel": 180000
+  },
+  {
+    "name": "Distilled water",
+    "value": "5 x10<sup>3</sup>",
+    "decimel": 5000
+  },
+  {
+    "name": "Dysprosium",
+    "value": "9.2 x10<sup>-7</sup>",
+    "decimel": 9.2e-7
+  },
+  {
+    "name": "Erbium",
+    "value": "8 x10<sup>-7</sup>",
+    "decimel": 8e-7
+  },
+  {
+    "name": "Europium",
+    "value": "9 x10<sup>-7</sup>",
+    "decimel": 9e-7
+  },
+  {
+    "name": "Fused quartz",
+    "value": "7.5 x10<sup>17</sup>",
+    "decimel": 750000000000000000
+  },
+  {
+    "name": "Gadolium",
+    "value": "1.3 x10<sup>-7</sup>",
+    "decimel": 0.0000013
+  },
+  {
+    "name": "Galinstan",
+    "value": "2.9 x10<sup>-7</sup>",
+    "decimel": 2.9e-7
+  },
+  {
+    "name": "Gallium",
+    "value": "2.7 x10<sup>-7</sup>",
+    "decimel": 2.7e-7
+  },
+  {
+    "name": "Germanium",
+    "value": "(1 - 500) x10<sup>-3</sup>",
+    "decimel": 0.5
+  },
+  {
+    "name": "Glass",
+    "value": "1 x10<sup>14</sup>",
+    "decimel": 100000000000000
+  },
+  {
+    "name": "Gold",
+    "value": "2.4 x10<sup>-8</sup>",
+    "decimel": 2.4e-8
+  },
+  {
+    "name": "Grain oriented electrical steel",
+    "value": "4.60 x10<sup>-7</sup>",
+    "decimel": 4.6e-7
+  },
+  {
+    "name": "Graphite",
+    "value": "1.38 x10<sup>-5</sup>",
+    "decimel": 0.0000138
+  },
+  {
+    "name": "Hafnium",
+    "value": "3 x10<sup>-7</sup>",
+    "decimel": 3e-7
+  },
+  {
+    "name": "Holmium",
+    "value": "8.14 x10<sup>-7</sup>",
+    "decimel": 8.14e-7
+  },
+  {
+    "name": "Inconel",
+    "value": "9.8 x10<sup>-7</sup>",
+    "decimel": 9.8e-7
+  },
+  {
+    "name": "Indium",
+    "value": "8.37 x10<sup>-8</sup>",
+    "decimel": 8.37e-8
+  },
+  {
+    "name": "Iridium",
+    "value": "4.8 x10<sup>-8</sup>",
+    "decimel": 4.8e-8
+  },
+  {
+    "name": "Iron",
+    "value": "9.7 x10<sup>-8</sup>",
+    "decimel": 9.7e-8
+  },
+  {
+    "name": "Lanthanum",
+    "value": "6.15 x10<sup>-7</sup>",
+    "decimel": 6.15e-7
+  },
+  {
+    "name": "Lead",
+    "value": "2.2 x10<sup>-7</sup>",
+    "decimel": 2.2e-7
+  },
+  {
+    "name": "Lithium",
+    "value": "9.28 x10<sup>-8</sup>",
+    "decimel": 9.28e-8
+  },
+  {
+    "name": "Lutetium",
+    "value": "5.8 x10<sup>-7</sup>",
+    "decimel": 5.8e-7
+  },
+  {
+    "name": "Magnesium",
+    "value": "1.47 x10<sup>-8</sup>",
+    "decimel": 1.47e-8
+  },
+  {
+    "name": "Manganese",
+    "value": "1.45 x10<sup>-6</sup>",
+    "decimel": 0.00000145
+  },
+  {
+    "name": "Manganin",
+    "value": "4 x10<sup>-7</sup>",
+    "decimel": 4e-7
+  },
+  {
+    "name": "Mercury",
+    "value": "9.8 x10<sup>-7</sup>",
+    "decimel": 9.8e-7
+  },
+  {
+    "name": "Mica",
+    "value": "1 x10<sup>13</sup>",
+    "decimel": 10000000000000
+  },
+  {
+    "name": "Mild steel",
+    "value": "1.5 x10<sup>-7</sup>",
+    "decimel": 1.5e-7
+  },
+  {
+    "name": "Molybdenum",
+    "value": "5.3 x10<sup>-8</sup>",
+    "decimel": 5.3e-8
+  },
+  {
+    "name": "Monel",
+    "value": "4.8 x10<sup>-7</sup>",
+    "decimel": 4.8e-7
+  },
+  {
+    "name": "Neodymium",
+    "value": "6.4 x10<sup>-7</sup>",
+    "decimel": 6.4e-7
+  },
+  {
+    "name": "Nichrome",
+    "value": "(1.1 - 1.5) x10<sup>-6</sup>",
+    "decimel": 0.0000015
+  },
+  {
+    "name": "Nickel",
+    "value": "6.99 x10<sup>-8</sup>",
+    "decimel": 6.99e-8
+  },
+  {
+    "name": "Nickeline",
+    "value": "4.5 x10<sup>-7</sup>",
+    "decimel": 4.5e-7
+  },
+  {
+    "name": "Niobium",
+    "value": "1.5 x10<sup>-7</sup>",
+    "decimel": 1.5e-7
+  },
+  {
+    "name": "Osmium",
+    "value": "8.2 x10<sup>-8</sup>",
+    "decimel": 8.2e-8
+  },
+  {
+    "name": "Palladium",
+    "value": "1.05 x10<sup>-7</sup>",
+    "decimel": 1.05e-7
+  },
+  {
+    "name": "Paraffin wax",
+    "value": "(0.1 - 1000) x10<sup>14</sup>",
+    "decimel": 100000000000000000
+  },
+  {
+    "name": "Phosphorus",
+    "value": "1 x10<sup>12</sup>",
+    "decimel": 1000000000000
+  },
+  {
+    "name": "Platinum",
+    "value": "1.06 x10<sup>-7</sup>",
+    "decimel": 1.06e-7
+  },
+  {
+    "name": "Plutonium",
+    "value": "1.46 x10<sup>-6</sup>",
+    "decimel": 0.00000146
+  },
+  {
+    "name": "Polonium",
+    "value": "4 x10<sup>-7</sup>",
+    "decimel": 4e-7
+  },
+  {
+    "name": "Potassium",
+    "value": "7.01 x10<sup>-8</sup>",
+    "decimel": 7.01e-8
+  },
+  {
+    "name": "Praseodymium",
+    "value": "6.5 x10<sup>-7</sup>",
+    "decimel": 6.5e-7
+  },
+  {
+    "name": "Promethium",
+    "value": "7.5 x10<sup>-7</sup>",
+    "decimel": 7.5e-7
+  },
+  {
+    "name": "Protactinium",
+    "value": "1.8 x10<sup>-7</sup>",
+    "decimel": 1.8e-7
+  },
+  {
+    "name": "PTFE",
+    "value": "1 x10<sup>16</sup>",
+    "decimel": 10000000000000000
+  },
+  {
+    "name": "Pure water",
+    "value": "2 x10<sup>5</sup>",
+    "decimel": 200000
+  },
+  {
+    "name": "Quartz",
+    "value": "7 x10<sup>17</sup>",
+    "decimel": 700000000000000000
+  },
+  {
+    "name": "Quartz - fused",
+    "value": "7.5 x10<sup>17</sup>",
+    "decimel": 750000000000000000
+  },
+  {
+    "name": "Rain water",
+    "value": "2 x10<sup>2</sup>",
+    "decimel": 200
+  },
+  {
+    "name": "Rhenium",
+    "value": "1.9 x10<sup>-7</sup>",
+    "decimel": 1.9e-7
+  },
+  {
+    "name": "Rhodium",
+    "value": "4.6 x10<sup>-8</sup>",
+    "decimel": 4.6e-8
+  },
+  {
+    "name": "Rubber - hard",
+    "value": "(1 - 100) x10<sup>13</sup>",
+    "decimel": 1000000000000000
+  },
+  {
+    "name": "Rubidium",
+    "value": "1.28 x10<sup>-7</sup>",
+    "decimel": 1.28e-7
+  },
+  {
+    "name": "Ruthenium",
+    "value": "7.1 x10<sup>-8</sup>",
+    "decimel": 7.1e-8
+  },
+  {
+    "name": "Samarium",
+    "value": "9.4 x10<sup>-7</sup>",
+    "decimel": 9.4e-7
+  },
+  {
+    "name": "Scandium",
+    "value": "5.62 x10<sup>-7</sup>",
+    "decimel": 5.62e-7
+  },
+  {
+    "name": "Sea water",
+    "value": "0.2",
+    "decimel": 0.2
+  },
+  {
+    "name": "Selenium",
+    "value": "1.2 x10<sup>-7</sup>",
+    "decimel": 1.2e-7
+  },
+  {
+    "name": "Silicon",
+    "value": "0.064",
+    "decimel": 0.064
+  },
+  {
+    "name": "Silver",
+    "value": "1.59 x10<sup>-8</sup>",
+    "decimel": 1.59e-8
+  },
+  {
+    "name": "Sodium",
+    "value": "8 x10<sup>-9</sup>",
+    "decimel": 8e-9
+  },
+  {
+    "name": "Solder",
+    "value": "1.5 x10<sup>-7</sup>",
+    "decimel": 1.5e-7
+  },
+  {
+    "name": "Stainless steel",
+    "value": "6.9 x10<sup>-7</sup>",
+    "decimel": 6.9e-7
+  },
+  {
+    "name": "Strontium",
+    "value": "1.32 x10<sup>-7</sup>",
+    "decimel": 1.32e-7
+  },
+  {
+    "name": "Sulfur",
+    "value": "1 x10<sup>15</sup>",
+    "decimel": 1000000000000000
+  },
+  {
+    "name": "Tantalum",
+    "value": "1.3 x10<sup>-7</sup>",
+    "decimel": 1.3e-7
+  },
+  {
+    "name": "Teflon",
+    "value": "1 x10<sup>24</sup>",
+    "decimel": 1e+24
+  },
+  {
+    "name": "Terbium",
+    "value": "1.15 x10<sup>-6</sup>",
+    "decimel": 0.00000115
+  },
+  {
+    "name": "Thallium",
+    "value": "1.5 x10<sup>-7</sup>",
+    "decimel": 1.5e-7
+  },
+  {
+    "name": "Thorium",
+    "value": "1.6 x10<sup>-7</sup>",
+    "decimel": 1.6e-7
+  },
+  {
+    "name": "Thulium",
+    "value": "6.7 x10<sup>-7</sup>",
+    "decimel": 6.7e-7
+  },
+  {
+    "name": "Tin",
+    "value": "1.09 x10<sup>-7</sup>",
+    "decimel": 1.09e-7
+  },
+  {
+    "name": "Titanium",
+    "value": "4.17 x10<sup>-7</sup>",
+    "decimel": 4.17e-7
+  },
+  {
+    "name": "Tungsten",
+    "value": "5.6 x10<sup>-8</sup>",
+    "decimel": 5.6e-8
+  },
+  {
+    "name": "Uranium",
+    "value": "3 x10<sup>-7</sup>",
+    "decimel": 3e-7
+  },
+  {
+    "name": "Vanadium",
+    "value": "2.5 x10<sup>-7</sup>",
+    "decimel": 2.5e-7
+  },
+  {
+    "name": "Wood - damp",
+    "value": "1000",
+    "decimel": 1000
+  },
+  {
+    "name": "Wood - dry",
+    "value": "1 x10<sup>14</sup>",
+    "decimel": 100000000000000
+  },
+  {
+    "name": "Ytterbium",
+    "value": "2.5 x10<sup>-7</sup>",
+    "decimel": 2.5e-7
+  },
+  {
+    "name": "Yttrium",
+    "value": "5.96 x10<sup>-7</sup>",
+    "decimel": 5.96e-7
+  },
+  {
+    "name": "Zinc",
+    "value": "1.69 x10<sup>-7</sup>",
+    "decimel": 1.69e-7
+  },
+  {
+    "name": "Zirconium",
+    "value": "4.21 x10<sup>-7</sup>",
+    "decimel": 4.21e-7
+  }
+]

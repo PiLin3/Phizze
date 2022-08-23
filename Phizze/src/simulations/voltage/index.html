@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Learn about Voltage 'Potential difference', and how we can measure it using Volts, using an interactive simulation."
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../imgs/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../imgs/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../imgs/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../../imgs/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../../imgs/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Voltage Simulator | Phizze.com" />
+    <meta
+      property="og:image"
+      content="../../imgs/share/voltage-facebook-share.png"
+    />
+    <meta
+      property="og:description"
+      content="Learn about Voltage 'Potential difference', and how we can measure it using Volts, using an interactive simulation."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="../../imgs/share/voltage-twitter-share.png"
+    />
+    <title>Voltage | Potential-difference | Volts Simulator</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <a href="../../index.html" class="logo">
+        <img
+          src="../../imgs/logo.webp"
+          alt="Phizze logo"
+          width="100%"
+          height="100%"
+        />
+      </a>
+      <nav id="main-nav">
+        <button
+          class="dropdown-btn"
+          data-list="simulations"
+          aria-expanded="false"
+        >
+          Simulations
+        </button>
+        <button
+          class="dropdown-btn"
+          data-list="visualizations"
+          aria-expanded="false"
+        >
+          Visualizations
+        </button>
+        <button
+          class="dropdown-btn"
+          data-list="resources"
+          aria-expanded="false"
+        >
+          Resources
+        </button>
+      </nav>
+      <div class="search-bar">
+        <div class="search-field">
+          <input
+            autocomplete="off"
+            type="text"
+            id="search"
+            placeholder="Search..."
+          />
+          <button
+            id="search-btn"
+            class="material-symbols-rounded"
+            aria-label="search"
+          >
+            search
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="dropdown-lists-container">
+      <div class="dropdown-list simulations">
+        <div class="list-column">
+          <a href="../kinematics/index.html" class="dropdown-item">
+            Kinematics
+          </a>
+          <a href="../pressure/index.html" class="dropdown-item">Pressure</a>
+          <a href="../resistance/index.html" class="dropdown-item">
+            Electrical Resistance
+          </a>
+          <a href="index.html" class="dropdown-item"> Voltage </a>
+        </div>
+      </div>
+      <div class="dropdown-list visualizations">
+        <div class="list-column"></div>
+      </div>
+      <div class="dropdown-list resources">
+        <div class="list-column">
+          <a href="../../resources/density/index.html" class="dropdown-item">
+            Materials Density
+          </a>
+          <a
+            href="../../resources/resistivity/index.html"
+            class="dropdown-item"
+          >
+            Materials Resistivity
+          </a>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="ad-template left"></div>
+      <div id="simulation-container">
+        <div class="canvas-container">
+          <canvas id="renderCanvas" width="100" height="100"></canvas>
+          <div class="slider-container">
+            <label for="voltage"> Voltage (<small>V</small>): </label>
+            <span id="voltage-output">1.5</span>
+            <input
+              type="range"
+              id="voltage"
+              name="voltage"
+              value="1.5"
+              min="0.5"
+              max="10"
+              step="0.1"
+            />
+          </div>
+          <div class="btns-container">
+            <button id="read-more" data-panel-btn="3">
+              Read About Voltage
+            </button>
+            <button id="fullscreen-btn" class="material-symbols-rounded">
+              fullscreen
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="ad-template right"></div>
+      <div class="material-symbols-rounded" id="share-icon">
+        share
+        <div class="share-btns-container">
+          <a href="#" id="facebook-btn" target="_blank">Facebook</a>
+          <a href="#" id="twitter-btn" target="_blank">Twitter</a>
+          <a href="#" id="pinterest-btn" target="_blank">Pinterest</a>
+          <a href="#" id="linkedin-btn" target="_blank">LinkedIn</a>
+          <a href="#" id="whatsapp-btn" target="_blank">Whatsapp</a>
+        </div>
+      </div>
+    </main>
+    <div id="panels-container">
+      <div class="panel">
+        <h3>Contact Us</h3>
+        <form action="https://MailThis.to/m.w.m.h@hotmail.com" method="POST">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="message">Message:</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="8"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="generic-btn" value="Submit">
+            Submit
+          </button>
+        </form>
+      </div>
+      <div class="panel">
+        <h3>Make a donation</h3>
+        <p>
+          If you would like to make a donation and help support the Phizze
+          platform to grow further and expand! You can do so through the
+          folowing link:
+        </p>
+        <p>
+          Paypal:
+          <a
+            class="generic-btn"
+            href="https://paypal.me/phizze?country.x=JO&locale.x=en_US"
+          >
+            Donate
+          </a>
+        </p>
+        <p>Any amount no matter how small, is appreciated!</p>
+      </div>
+      <div class="panel">
+        <figure>
+          <img
+            src="../../imgs/profile-pic.webp"
+            alt="a picture of Mahmoud Hadman"
+            width="100%"
+            height="100%"
+          />
+          <figcaption>Developer: Mahmoud Hamdan</figcaption>
+        </figure>
+        <h3>About Phizze</h3>
+        <p>
+          Phizze.com is a free educational platform that provides interactive
+          simulations, visualizations, and a multitude of physics, mathamtics,
+          and engineering resources.
+        </p>
+        <p>
+          The idea started when I was learning about mathmatics and physics
+          during my collage study, where I would spend hours searching and
+          reading about different topics through some pretty awesome websites,
+          but still I wished if there were a platform where I can visualize and
+          interact with the concepts I was learning at the time! a place where I
+          can see the effects of moment of inertia on a bending beam, or the
+          relation between velocity and pressure in a closed pipe! and so
+          through that and in the hope of creating something that might help
+          others, Phizze was born.
+        </p>
+      </div>
+      <div class="panel">
+        <h1>Voltage</h1>
+        <p>
+          Voltage is defined as the pressure caused by a power source, that
+          pushes charged electrons along a circuit path creating current.
+        </p>
+        <p>
+          In low resistant materials (Conductors), free electrons like to jump
+          around between atoms randomly. Voltage is what's used to force / push
+          those electrons to move along a path, creating electrical current.
+        </p>
+        <p>
+          Voltage is measured in Volts (V). One Volt equals one joule of energy
+          produced by one coulomb of charge.
+        </p>
+        <p>
+          You might hear Voltage referred to as "Potential Difference", the term
+          is referring to the potential difference between the two points in a
+          power source, where one point has a higher potentail and the other has
+          a lower potential the difference between the two points (measured in
+          Volts) is what causes the electrons to move from the higher potential
+          to the more comfortable lower potential point.
+        </p>
+        <h4>Example:</h4>
+        <p>
+          If we took a look at a 1.5 volts battery, the number 1.5 would mean
+          that potential difference between the battery's negative and positive
+          terminals is equal to 1.5 volts, "meaning that if you somehow managed
+          to grap one coulomb of charge from the positive terminal and move it
+          to negative one that action would require you to do 1.5 joules of
+          work, and so now if you released that coulomb from the negative
+          terminal it will try to reach the lower potential (Positive terminal)
+          and that would generate 1.5 joules of energy.
+        </p>
+        <p>Voltage = V = Joule / Coulomb</p>
+        <p>
+          To get a better sense of how Voltage works, you can check the
+          simulation and see how changing the voltage affects the the current
+          and light Bulb.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <p>Phizze 2022 @ All Rights Reserved</p>
+      <nav id="footer-nav">
+        <button data-panel-btn="0">Contact Us</button>
+        <button data-panel-btn="1">Make a donation</button>
+        <button data-panel-btn="2">About</button>
+      </nav>
+    </footer>
+  </body>
+</html>

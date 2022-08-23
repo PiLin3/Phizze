@@ -1,0 +1,557 @@
+[
+  {
+    "name": "Actinium",
+    "si": "10070",
+    "us": "629"
+  },
+  {
+    "name": "Admiralty Brass",
+    "si": "8525",
+    "us": "532"
+  },
+  {
+    "name": "Aluminum",
+    "si": "2600",
+    "us": "162"
+  },
+  {
+    "name": "Aluminum - 1100",
+    "si": "2720",
+    "us": "170"
+  },
+  {
+    "name": "Aluminum - 6061",
+    "si": "2720",
+    "us": "170"
+  },
+  {
+    "name": "Aluminum - 7050",
+    "si": "2800",
+    "us": "175"
+  },
+  {
+    "name": "Aluminum - 7178",
+    "si": "2830",
+    "us": "177"
+  },
+  {
+    "name": "Aluminum bronze (3-10% Al)",
+    "si": "7800 - 8650",
+    "us": "487 - 540"
+  },
+  {
+    "name": "Aluminum foil",
+    "si": "2725",
+    "us": "170"
+  },
+  {
+    "name": "Antimony",
+    "si": "6680",
+    "us": "417"
+  },
+  {
+    "name": "Babbitt",
+    "si": "7270",
+    "us": "454"
+  },
+  {
+    "name": "Barium",
+    "si": "3595",
+    "us": "224"
+  },
+  {
+    "name": "Beryllium",
+    "si": "1850",
+    "us": "115"
+  },
+  {
+    "name": "Beryllium Copper",
+    "si": "8500",
+    "us": "531"
+  },
+  {
+    "name": "Bismuth",
+    "si": "9790",
+    "us": "611"
+  },
+  {
+    "name": "Brass - casting",
+    "si": "8500",
+    "us": "531"
+  },
+  {
+    "name": "Brass - rolled and drawn",
+    "si": "8500",
+    "us": "531"
+  },
+  {
+    "name": "Brass 60/40",
+    "si": "8520",
+    "us": "532"
+  },
+  {
+    "name": "Bronze - lead",
+    "si": "7700 - 8700",
+    "us": "481 - 543"
+  },
+  {
+    "name": "Bronze - phosphorous",
+    "si": "8700 - 8900",
+    "us": "543 - 556"
+  },
+  {
+    "name": "Bronze (8-14% Sn)",
+    "si": "7400 - 8900",
+    "us": "462 - 556"
+  },
+  {
+    "name": "Cadmium",
+    "si": "8690",
+    "us": "542"
+  },
+  {
+    "name": "Caesium",
+    "si": "1870",
+    "us": "117"
+  },
+  {
+    "name": "Calcium",
+    "si": "1540",
+    "us": "96"
+  },
+  {
+    "name": "Cast Iron",
+    "si": "6850 - 7750",
+    "us": "428 - 484"
+  },
+  {
+    "name": "Cerium",
+    "si": "6770",
+    "us": "423"
+  },
+  {
+    "name": "Cesium",
+    "si": "1930",
+    "us": "120"
+  },
+  {
+    "name": "Chromium",
+    "si": "7150",
+    "us": "446"
+  },
+  {
+    "name": "Cobalt",
+    "si": "8860",
+    "us": "553"
+  },
+  {
+    "name": "Constantan",
+    "si": "8900",
+    "us": "556"
+  },
+  {
+    "name": "Columbium",
+    "si": "8550",
+    "us": "534"
+  },
+  {
+    "name": "Constantan",
+    "si": "8800",
+    "us": "549"
+  },
+  {
+    "name": "Copper",
+    "si": "8960",
+    "us": "559"
+  },
+  {
+    "name": "Cupronickel",
+    "si": "8900",
+    "us": "556"
+  },
+  {
+    "name": "Duralumin",
+    "si": "2780",
+    "us": "174"
+  },
+  {
+    "name": "Dysprosium",
+    "si": "8550",
+    "us": "534"
+  },
+  {
+    "name": "Electrum",
+    "si": "8500 - 8800",
+    "us": "531 - 549"
+  },
+  {
+    "name": "Erbium",
+    "si": "9070",
+    "us": "566"
+  },
+  {
+    "name": "Europium",
+    "si": "5240",
+    "us": "327"
+  },
+  {
+    "name": "Gadolinium",
+    "si": "7900",
+    "us": "493"
+  },
+  {
+    "name": "Gallium",
+    "si": "5910",
+    "us": "369"
+  },
+  {
+    "name": "Germanium",
+    "si": "5300",
+    "us": "331"
+  },
+  {
+    "name": "Gold",
+    "si": "19300",
+    "us": "1205"
+  },
+  {
+    "name": "Hafnium",
+    "si": "13300",
+    "us": "830"
+  },
+  {
+    "name": "Hatelloy",
+    "si": "9250",
+    "us": "577"
+  },
+  {
+    "name": "Holmium",
+    "si": "8800",
+    "us": "549"
+  },
+  {
+    "name": "Indium",
+    "si": "7310",
+    "us": "456"
+  },
+  {
+    "name": "Inconel",
+    "si": "8500",
+    "us": "531"
+  },
+  {
+    "name": "Incoloy",
+    "si": "8003",
+    "us": "500"
+  },
+  {
+    "name": "Iridium",
+    "si": "22500",
+    "us": "1405"
+  },
+  {
+    "name": "Iron",
+    "si": "7870",
+    "us": "491"
+  },
+  {
+    "name": "Lanthanum",
+    "si": "6150",
+    "us": "384"
+  },
+  {
+    "name": "Lead",
+    "si": "11,300",
+    "us": "NaN"
+  },
+  {
+    "name": "Lithium",
+    "si": "530",
+    "us": "33"
+  },
+  {
+    "name": "Lutetium",
+    "si": "9840",
+    "us": "614"
+  },
+  {
+    "name": "Magnesium",
+    "si": "1740",
+    "us": "109"
+  },
+  {
+    "name": "Manganese",
+    "si": "7300",
+    "us": "456"
+  },
+  {
+    "name": "Manganese Bronze",
+    "si": "8730",
+    "us": "545"
+  },
+  {
+    "name": "Manganin",
+    "si": "8550",
+    "us": "534"
+  },
+  {
+    "name": "Mercury",
+    "si": "13530",
+    "us": "845"
+  },
+  {
+    "name": "Molybdenum",
+    "si": "10200",
+    "us": "637"
+  },
+  {
+    "name": "Monel",
+    "si": "8370 - 8820",
+    "us": "523 - 551"
+  },
+  {
+    "name": "Neodymium",
+    "si": "7010",
+    "us": "438"
+  },
+  {
+    "name": "Neptunium",
+    "si": "20200",
+    "us": "1261"
+  },
+  {
+    "name": "Nichrome",
+    "si": "8450",
+    "us": "528"
+  },
+  {
+    "name": "Nickel",
+    "si": "8900",
+    "us": "556"
+  },
+  {
+    "name": "Nickeline",
+    "si": "8700",
+    "us": "543"
+  },
+  {
+    "name": "Nimonic",
+    "si": "8100",
+    "us": "506"
+  },
+  {
+    "name": "Niobium",
+    "si": "8570",
+    "us": "535"
+  },
+  {
+    "name": "Osmium",
+    "si": "22590",
+    "us": "1410"
+  },
+  {
+    "name": "Palladium",
+    "si": "12000",
+    "us": "749"
+  },
+  {
+    "name": "Phosphor Bronze",
+    "si": "8900",
+    "us": "556"
+  },
+  {
+    "name": "Platinum",
+    "si": "21500",
+    "us": "1342"
+  },
+  {
+    "name": "Plutonium",
+    "si": "19700",
+    "us": "1230"
+  },
+  {
+    "name": "Polonium",
+    "si": "9200",
+    "us": "574"
+  },
+  {
+    "name": "Potassium",
+    "si": "890",
+    "us": "56"
+  },
+  {
+    "name": "Praseodymium",
+    "si": "6770",
+    "us": "423"
+  },
+  {
+    "name": "Promethium",
+    "si": "7260",
+    "us": "453"
+  },
+  {
+    "name": "Protactinium",
+    "si": "1540",
+    "us": "96"
+  },
+  {
+    "name": "Radium",
+    "si": "500",
+    "us": "31"
+  },
+  {
+    "name": "Red Brass",
+    "si": "8720",
+    "us": "544"
+  },
+  {
+    "name": "Rhenium",
+    "si": "20800",
+    "us": "1298"
+  },
+  {
+    "name": "Rhodium",
+    "si": "12400",
+    "us": "774"
+  },
+  {
+    "name": "Rubidium",
+    "si": "1530",
+    "us": "96"
+  },
+  {
+    "name": "Ruthenium",
+    "si": "12100",
+    "us": "755"
+  },
+  {
+    "name": "Samarium",
+    "si": "7520",
+    "us": "469"
+  },
+  {
+    "name": "Scandium",
+    "si": "2990",
+    "us": "187"
+  },
+  {
+    "name": "Silver",
+    "si": "10500",
+    "us": "655"
+  },
+  {
+    "name": "Sodium",
+    "si": "970",
+    "us": "61"
+  },
+  {
+    "name": "Solder 50/50 Pb Sn",
+    "si": "8880",
+    "us": "554"
+  },
+  {
+    "name": "Stainless Steel",
+    "si": "7480 - 7950",
+    "us": "467 - 496"
+  },
+  {
+    "name": "Steel",
+    "si": "7860",
+    "us": "491"
+  },
+  {
+    "name": "Strontium",
+    "si": "2640",
+    "us": "165"
+  },
+  {
+    "name": "Tantalum",
+    "si": "16400",
+    "us": "1024"
+  },
+  {
+    "name": "Technetium",
+    "si": "11000",
+    "us": "687"
+  },
+  {
+    "name": "Terbium",
+    "si": "8230",
+    "us": "514"
+  },
+  {
+    "name": "Thallium",
+    "si": "11800",
+    "us": "737"
+  },
+  {
+    "name": "Thorium",
+    "si": "11700",
+    "us": "730"
+  },
+  {
+    "name": "Thulium",
+    "si": "9320",
+    "us": "582"
+  },
+  {
+    "name": "Tin",
+    "si": "7260",
+    "us": "453"
+  },
+  {
+    "name": "Titanium",
+    "si": "4510",
+    "us": "282"
+  },
+  {
+    "name": "Tungsten",
+    "si": "19300",
+    "us": "1205"
+  },
+  {
+    "name": "Uranium",
+    "si": "19100",
+    "us": "1192"
+  },
+  {
+    "name": "Vanadium",
+    "si": "6000",
+    "us": "375"
+  },
+  {
+    "name": "White Metal",
+    "si": "7050",
+    "us": "440"
+  },
+  {
+    "name": "Wrought Iron",
+    "si": "7740",
+    "us": "483"
+  },
+  {
+    "name": "Yellow Brass",
+    "si": "8470",
+    "us": "529"
+  },
+  {
+    "name": "Ytterbium",
+    "si": "6900",
+    "us": "431"
+  },
+  {
+    "name": "Yttrium",
+    "si": "4470",
+    "us": "279"
+  },
+  {
+    "name": "Zinc",
+    "si": "7140",
+    "us": "446"
+  },
+  {
+    "name": "Zirconium",
+    "si": "6520",
+    "us": "407"
+  }
+]

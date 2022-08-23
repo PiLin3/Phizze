@@ -1,0 +1,112 @@
+main {
+  overflow-y: scroll;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 1em;
+  margin: 0 auto;
+}
+.main-content h1 {
+  font-size: 1em;
+  padding: 0.5em 0.75em;
+  margin: 0;
+  color: var(--main-color);
+  background-color: var(--dark-color);
+}
+.user-input {
+  display: flex;
+  gap: 0.5em;
+  margin-block: 0.5em;
+}
+.filter-container {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border: 0.1em solid var(--dark-color);
+  color: var(--main-color);
+  background-color: var(--dark-color);
+}
+.filter-container label {
+  padding: 0.25em;
+}
+.filter-container > select {
+  display: block;
+  width: fit-content;
+  height: 100%;
+  padding: 0.2em 0.25em;
+  background-color: var(--main-color);
+}
+.filter-container > select:hover {
+  cursor: pointer;
+}
+#material-search {
+  padding: 0.25em;
+  color: var(--dark-color);
+  background-color: var(--main-color);
+}
+/* Table Styles */
+table {
+  text-align: left;
+  width: 100%;
+  max-height: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+table * {
+  width: 100%;
+}
+thead {
+  background-color: var(--dark-color);
+  color: var(--main-color);
+}
+th, td {
+  width: fit-content;
+  padding: 0.5em 0.75em;
+}
+tbody {
+  width: 100%;
+  background-color: var(--extra-light-color);
+  color: var(--dark-color);
+}
+tbody::after {
+  content: "";
+  display: block;
+  height: 1em;
+  background-color: var(--main-color);
+}
+tbody tr {
+  border-bottom: 0.05em solid var(--main-color);
+}
+tbody tr:last-of-type {
+  border-bottom: 0.25em solid var(--dark-color);
+}
+/* Highlight Activ Row */
+tbody tr:hover {
+  font-weight: bold;
+  color: #000000;
+}
+.hide {
+  display: none;
+}
+@media screen and (max-width: 34.375rem) {
+  .main-content {
+    font-size: 0.9em;
+    padding: 0.4em;
+  }
+  .user-input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4em;
+    margin-bottom: 0.4em;
+  }
+  .filter-container {
+    justify-content: space-between;
+    width: 100%;
+  }
+  #density-search {
+    grid-column: span 2;
+    width: 100%;
+  }
+}
